@@ -130,7 +130,9 @@ header.top{position:relative;flex-wrap:wrap}
 @media (min-width:900px){
  .menubtn{display:none}
  .mainnav{display:flex;flex-direction:row;width:auto;background:none;border:0;padding:0;margin:0;gap:2px}
- .mainnav button{font-size:15px;padding:8px 10px;min-height:40px;gap:6px}
+ .mainnav button{font-size:15px;padding:8px 8px;min-height:40px;gap:5px;white-space:nowrap}
+ header.top{flex-wrap:nowrap}
+ .mainnav{gap:0}
  .mainnav button svg{width:18px;height:18px}
  .mainnav button:first-child{display:none}
 }
@@ -191,6 +193,8 @@ a.btn{display:inline-flex!important;align-items:center;justify-content:center;te
 .skip:focus{top:12px}
 main:focus{outline:none}
 a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
+.acclist{margin:0;padding-inline-start:20px;display:grid;gap:6px}
+@media (min-width:900px){.mainnav .m-only{display:none!important}}
 </style>
 </head>
 <body>
@@ -234,7 +238,7 @@ function go(v,extra){Object.assign(S,{view:v,menu:false},extra||{});PUSH=true;re
 function header(){
   const cur=S.view==='my'?S.tab:S.view;
   const item=(id,label,icon,attr)=>`<button ${attr} ${cur===id?'aria-current="page"':''}>${icon||''}<span>${label}</span></button>`;
-  const items=item('home','דף הבית',leaf(20),'data-go="home"')+item('rights','מה מגיע לי',IC.rights,'data-tabgo="rights"')+item('orgs','ארגונים ועמותות',IC.orgs,'data-tabgo="orgs"')+item('tasks','מה לעשות ומתי',IC.tasks,'data-tabgo="tasks"')+item('about','מקורות המידע','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>','data-go="about"');
+  const items=item('home','דף הבית',leaf(20),'data-go="home"')+item('rights','מה מגיע לי',IC.rights,'data-tabgo="rights"')+item('orgs','ארגונים ועמותות',IC.orgs,'data-tabgo="orgs"')+item('tasks','מה לעשות ומתי',IC.tasks,'data-tabgo="tasks"')+item('about','מקורות המידע','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>','data-go="about"')+item('access','הצהרת נגישות','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="4.5" r="1.8"/><path d="M5 8.5l7 1.5 7-1.5M12 10v5M12 15l-3.5 6M12 15l3.5 6"/></svg>','data-go="access" class="m-only"');
   return `<header class="top"><button class="brand" data-go="home"><svg viewBox="18 28 124 112" width="34" height="31" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round">
 <path d="M22 136C22 100 36 76 60 72C80 74 92 96 94 136Z" fill="var(--primary-soft)" stroke="var(--primary)" stroke-width="2.5"/>
 <path d="M66 136C68 102 82 80 104 78C126 80 138 102 138 136Z" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
@@ -248,7 +252,7 @@ function header(){
   <nav class="mainnav" id="mainmenu" aria-label="תפריט ראשי" ${S.menu?'data-open':''}>${items}</nav></header>`;
 }
 function footer(){
-  return `<footer class="site"><p>${asof(SITE.disclaimer.footer)}</p><p>לעדכונים והצעות: <span class="ltr">${esc(SITE.contactEmail)}</span> · <button class="linkbtn" data-go="about">מקורות המידע</button></p></footer>`;
+  return `<footer class="site"><p>${asof(SITE.disclaimer.footer)}</p><p>לעדכונים והצעות: <span class="ltr">${esc(SITE.contactEmail)}</span> · <button class="linkbtn" data-go="about">מקורות המידע</button> · <button class="linkbtn" data-go="access">הצהרת נגישות</button></p></footer>`;
 }
 function viewHome(){
   return `<div class="home"><svg viewBox="0 0 160 140" width="150" height="131" class="embrace" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -368,6 +372,10 @@ function viewOrg(){
   <section><span class="label">למי</span>${esc(o.audience)}</section><section><span class="label">מה עושים שם</span>${esc(o.oneLiner)}</section><section><span class="label">איפה</span>${esc(o.location)}</section>
   <div class="contact">${c}</div><p class="asof" style="margin-top:16px">*המידע נכון ל-<span class="ltr">${o.asOf}</span> · <a href="${esc(o.sourceUrl)}" target="_blank" rel="noopener noreferrer">מקור: אתר העמותה</a></p></div>`;
 }
+function viewAccess(){const A=SITE.accessibility;
+  return `<h1>${esc(A.title)}</h1><p>${esc(A.intro)}</p><h2>${esc(A.doneTitle)}</h2><ul class="acclist">${A.done.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+  <h2>${esc(A.limitsTitle)}</h2><p>${esc(A.limits)}</p><h2>${esc(A.contactTitle)}</h2><p>${esc(A.contact)} <span class="ltr" style="font-weight:600">${esc(SITE.contactEmail)}</span></p>
+  <p class="small muted">${asof(A.updated)}</p>`;}
 function viewAbout(){
   const verify=verifyHtml();
   const src=SITE.sources.map(x=>`<div class="src"><strong>${esc(x.name)}</strong><span class="muted small">${esc(x.about)}</span>${x.url?`<a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">לאתר</a>`:''}</div>`).join('');
@@ -381,7 +389,7 @@ function stateHash(){const p=new URLSearchParams();HKEYS.forEach(k=>{const v=S[k
   const s=p.toString();return s?'#'+s:'#';}
 function readHash(){const p=new URLSearchParams(location.hash.slice(1));
   Object.assign(S,{done:false,view:'home',tab:'rights',cat:null,catSkipped:false,ages:[],kidsSkipped:true,count:0,id:null,back:'my',stage:null,menu:false});
-  if(p.get('view')&&['home','q1','q2','my','right','org','about'].includes(p.get('view')))S.view=p.get('view');
+  if(p.get('view')&&['home','q1','q2','my','right','org','about','access'].includes(p.get('view')))S.view=p.get('view');
   if(['rights','orgs','tasks'].includes(p.get('tab')))S.tab=p.get('tab');
   if(p.get('cat')&&SITE.categories.some(c=>c.id===p.get('cat')))S.cat=p.get('cat');
   S.catSkipped=p.get('catSkipped')==='true';S.done=p.get('done')==='true';
@@ -393,7 +401,7 @@ function readHash(){const p=new URLSearchParams(location.hash.slice(1));
 let PUSH=false;
 function render(){
   if(S.view==='my'&&!S.done)S.view='q1';
-  const v={home:viewHome,q1:viewQ1,q2:viewQ1,my:viewMy,right:viewRight,org:viewOrg,about:viewAbout}[S.view]();
+  const v={home:viewHome,q1:viewQ1,q2:viewQ1,my:viewMy,right:viewRight,org:viewOrg,about:viewAbout,access:viewAccess}[S.view]();
   document.getElementById('app').innerHTML='<button class="skip" data-act="skipmain">דילוג לתוכן</button>'+header()+'<main id="main" tabindex="-1">'+v+'</main>'+'<div class="helpline">רוצה לדבר עם מישהו? <strong>ער"ן <span class="ltr">1201</span></strong> · כל שעה</div>'+footer();
   const h=stateHash();if(h!==(location.hash||'#')){try{history[PUSH?'pushState':'replaceState'](null,'',h)}catch(e){}}PUSH=false;
 }
