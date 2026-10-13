@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="מקום אחד שעושה סדר לאלמנות ולאלמנים בישראל: זכויות, קצבאות ומענקים, ארגונים ועמותות, ומה לעשות ומתי – מותאם אישית, בלי הרשמה.">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#FAF6F0">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:title" content="מידע לאלמנות ולאלמנים">
+<meta property="og:description" content="מקום אחד שעושה סדר לאלמנות ולאלמנים בישראל: זכויות, קצבאות ומענקים, ארגונים ועמותות, ומה לעשות ומתי – מותאם אישית, בלי הרשמה.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<title>מידע לאלמנות ולאלמנים</title>
+<style>
+@font-face{font-family:"Assistant";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/assistant-hebrew-400-normal.woff2) format("woff2");unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:"Assistant";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/assistant-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Assistant";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/assistant-hebrew-600-normal.woff2) format("woff2");unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:"Assistant";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/assistant-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Assistant";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/assistant-hebrew-700-normal.woff2) format("woff2");unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:"Assistant";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/assistant-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Frank Ruhl Libre";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/frank-ruhl-libre-hebrew-500-normal.woff2) format("woff2");unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:"Frank Ruhl Libre";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/frank-ruhl-libre-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Frank Ruhl Libre";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/frank-ruhl-libre-hebrew-700-normal.woff2) format("woff2");unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:"Frank Ruhl Libre";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/frank-ruhl-libre-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+/* Layout: the real site's mobile-first single column (max 720px), RTL, calm sage + sand palette from the spec */
+:root{--bg:#FAF6F0;--sand:#ECE3D6;--primary:#5F7A6A;--primary-soft:#DDE6DF;--ink:#3E5547;--accent:#B9785C;--accent-soft:#F3E3D8;--text:#33302C;--muted:#5A544E;--border:#E2D8CA;--surface:#FFFFFF;--on-primary:#FFFFFF;
+--display:"Frank Ruhl Libre","David Libre",Georgia,serif;--body:"Assistant","Noto Sans Hebrew",Arial,sans-serif}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#1D201E;--sand:#2F332F;--primary:#8FB09C;--primary-soft:#2E3B33;--ink:#C9DCCF;--accent:#D49A7E;--accent-soft:#3A2E28;--text:#ECE7DF;--muted:#B4ADA4;--border:#3A3F3B;--surface:#262A27;--on-primary:#16201A;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1D201E;--sand:#2F332F;--primary:#8FB09C;--primary-soft:#2E3B33;--ink:#C9DCCF;--accent:#D49A7E;--accent-soft:#3A2E28;--text:#ECE7DF;--muted:#B4ADA4;--border:#3A3F3B;--surface:#262A27;--on-primary:#16201A;color-scheme:dark}
+body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6}
+#app{position:relative;max-width:720px;margin-inline:auto;padding-inline:16px;padding-block:0 40px}
+
+header.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:16px;border-bottom:1px solid var(--border);margin-bottom:24px}
+.brand{line-height:1;font-family:var(--display);font-weight:700;font-size:20px;color:var(--ink);background:none;border:0;cursor:pointer;display:flex;align-items:center;gap:8px;padding:0}
+nav.menu{display:flex;gap:4px;flex-wrap:wrap}
+nav.menu button{font:inherit;font-size:15px;background:none;border:0;color:var(--muted);padding:6px 8px;border-radius:8px;cursor:pointer}
+nav.menu button:hover{background:var(--primary-soft);color:var(--ink)}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(28px,7vw,36px);line-height:1.25;margin:0 0 12px;text-wrap:balance;color:var(--ink)}
+h2{font-family:var(--display);font-weight:700;font-size:24px;margin:36px 0 14px;color:var(--text)}
+p{margin:0 0 12px}
+.muted{color:var(--muted)}
+.small{font-size:14px}
+button{font-family:inherit}
+.btn{box-sizing:border-box;font:inherit;font-weight:600;border:0;border-radius:12px;padding:12px 22px;min-height:48px;cursor:pointer;background:var(--primary);color:var(--on-primary)}
+.btn.sm{min-height:40px;padding:8px 20px;border-radius:999px;font-size:15px;width:fit-content}
+.btn:disabled{opacity:.45;cursor:default}
+.btn.ghost{background:none;color:var(--ink);text-decoration:underline;text-underline-offset:4px;padding-inline:8px}
+.btn.secondary{background:var(--primary-soft);color:var(--ink)}
+.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.home{text-align:center;padding-block:28px 32px;background:radial-gradient(ellipse at 50% 0%,var(--sand) 0%,transparent 70%);border-radius:24px}
+.embrace{display:block;margin:0 auto 6px}
+.welcome{max-width:36ch;margin:0 auto 14px;color:var(--text);font-size:18px}
+.home .leaf{margin-inline:auto;display:block}
+.home p.lead{font-size:19px;max-width:30ch;margin:0 auto 24px}
+.progress{color:var(--muted);font-size:15px;margin-bottom:6px}
+.choices{display:grid;gap:10px;margin-block:18px 24px}
+.choice{display:block;width:100%;text-align:start;background:var(--surface);border:2px solid var(--border);border-radius:14px;padding:14px 16px;font:inherit;color:var(--text);cursor:pointer}
+.choice[aria-checked="true"]{background:var(--primary-soft);border-color:var(--primary)}
+.choice .hint{display:block;color:var(--muted);font-size:14px}
+.stepper{display:flex;align-items:center;gap:16px;margin-block:12px 18px}
+.stepper button{width:48px;height:48px;border-radius:50%;border:2px solid var(--primary);background:var(--surface);color:var(--ink);font-size:24px;cursor:pointer;line-height:1}
+.stepper output{font-size:28px;font-weight:700;min-width:2ch;text-align:center;font-variant-numeric:tabular-nums}
+.agerow{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:10px 14px;margin-bottom:8px}
+.agerow select{font:inherit;padding:6px 10px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--text);min-width:120px}
+.summary{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;color:var(--muted)}
+.summary strong{color:var(--text)}
+.linkbtn{background:none;border:0;color:var(--ink);text-decoration:underline;text-underline-offset:3px;cursor:pointer;font:inherit;padding:0}
+.notice{background:var(--sand);border-radius:12px;padding:12px 14px;font-size:15px;display:flex;gap:10px;margin-top:14px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;padding-bottom:4px;margin-bottom:12px}
+.tabs button{flex:none;font:inherit;font-size:15px;border:1px solid var(--border);background:var(--surface);color:var(--muted);border-radius:99px;padding:6px 14px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--primary);border-color:var(--primary);color:var(--on-primary)}
+.tasks{display:grid;gap:8px}
+.task{background:var(--surface);border:1px solid var(--border);border-radius:12px}
+.task>button{width:100%;text-align:start;background:none;border:0;padding:12px 14px;font:inherit;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;gap:10px;align-items:center}
+.task .cond{display:block;font-size:13px;color:var(--muted)}
+.task .chev{color:var(--muted);transition:transform .2s}
+.task[open] .chev{transform:rotate(180deg)}
+.task .more{padding:0 14px 14px;font-size:16px;display:grid;gap:6px}
+.label{font-size:13px;color:var(--muted);display:block}
+.cards{display:grid;gap:12px}
+@media (min-width:1024px){.cards.orgs{grid-template-columns:1fr 1fr}}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:16px;display:grid;gap:8px;min-width:0}
+.card h3{margin:0;font-size:19px;font-weight:700;line-height:1.35}
+.amount{color:var(--ink);font-weight:600}
+.asof{font-size:13px;color:var(--muted)}
+.info{background:var(--sand);border-radius:16px;padding:16px;margin-top:14px}
+.info h3{margin:0 0 8px;font-family:var(--display);font-size:20px}
+.info ul{margin:0;padding-inline-start:20px;display:grid;gap:6px}
+.orgtop{display:flex;gap:12px;align-items:center}
+.tile{width:88px;height:64px;flex:none;border:1px solid var(--border);border-radius:12px;background:var(--primary-soft);display:grid;place-items:center}
+.tile.big{width:160px;height:112px}
+.tile.has{background:#fff;padding:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.tile.has img{max-width:72px;max-height:48px;width:auto;height:auto;object-fit:contain;display:block}
+.tile.big.has img{max-width:144px;max-height:96px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}
+.pill{background:var(--primary-soft);color:var(--ink);font-size:13px;border-radius:99px;padding:2px 10px}
+.contact{display:grid;gap:14px;margin-top:6px;justify-items:start}
+.contact section{display:grid;gap:8px}
+.vbtn span{overflow-wrap:anywhere}
+.contact a,.contact span.c{color:var(--ink);overflow-wrap:anywhere}
+.ltr{direction:ltr;unicode-bidi:isolate}
+.detail section{margin-bottom:16px}
+.note{border-inline-start:3px solid var(--accent);background:var(--surface);padding:10px 14px;border-radius:8px}
+.verify{display:grid;gap:8px}
+.verify .vrow{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 16px;display:grid;gap:8px;align-content:start}
+.vact{display:flex;flex-wrap:wrap;gap:8px 10px}
+.vbtn{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:4px 12px;border:1px solid var(--border);border-radius:999px;background:var(--bg);color:var(--ink);text-decoration:none;font-weight:600;font-size:15px}
+.vbtn:hover{border-color:var(--primary);background:var(--primary-soft)}
+.vbtn svg{color:var(--primary);flex:none}
+@media (min-width:700px){.verify{grid-template-columns:1fr 1fr}}
+footer.site{margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:14px;color:var(--muted)}
+.helpline{background:var(--sand);border:1px solid var(--border);border-radius:12px;padding:12px 16px;margin-top:32px;text-align:center;font-size:15px}
+.helpline strong{color:var(--ink)}
+a{color:var(--ink)}
+[hidden]{display:none!important}
+.brand svg{display:block;flex:none}
+.brand span.bt{display:block;line-height:1.2;position:relative;top:2px}
+.dedication{margin:28px auto 0;max-width:34ch;text-align:center;font-family:var(--display);font-size:18px;line-height:1.6;color:var(--ink);display:grid;justify-items:center;gap:6px}
+.dedication p{margin:0}
+header.top{position:relative;flex-wrap:wrap}
+.menubtn{display:inline-flex;align-items:center;gap:6px;font:inherit;font-weight:600;font-size:16px;color:var(--ink);background:var(--primary-soft);border:0;border-radius:10px;padding:8px 14px;min-height:44px;cursor:pointer}
+.mainnav{display:none;width:100%;flex-direction:column;gap:4px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:8px;margin-top:10px}
+.mainnav[data-open]{display:flex}
+.mainnav button{display:flex;align-items:center;gap:12px;font:inherit;font-size:17px;color:var(--text);background:none;border:0;border-radius:10px;padding:12px;min-height:48px;cursor:pointer;text-align:start}
+.mainnav button svg{color:var(--primary);flex:none}
+.mainnav button:hover{background:var(--primary-soft)}
+.mainnav button[aria-current="page"]{background:var(--primary-soft);color:var(--ink);font-weight:700}
+@media (min-width:900px){
+ .menubtn{display:none}
+ .mainnav{display:flex;flex-direction:row;width:auto;background:none;border:0;padding:0;margin:0;gap:2px}
+ .mainnav button{font-size:15px;padding:8px 10px;min-height:40px;gap:6px}
+ .mainnav button svg{width:18px;height:18px}
+ .mainnav button:first-child{display:none}
+}
+
+.options{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px auto 30px;max-width:640px}
+.opt{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:6px;width:100%;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:14px 8px 12px;font:inherit;color:var(--text);cursor:pointer;text-align:center;box-shadow:0 1px 0 var(--border)}
+.opt:hover{border-color:var(--primary);background:var(--primary-soft)}
+.opt:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
+.opt .ic{flex:none;width:44px;height:44px;border-radius:50%;background:var(--primary-soft);display:grid;place-items:center;color:var(--primary)}
+.opt b{display:block;font-family:var(--display);font-size:18px;font-weight:700;color:var(--ink);line-height:1.2;text-wrap:balance}
+.opt span.l{display:block;color:var(--muted);font-size:13px;line-height:1.4;margin-top:2px;text-wrap:balance}
+@media (min-width:600px){.options{gap:14px}.opt{padding:20px 14px 16px;gap:8px}.opt .ic{width:52px;height:52px}.opt b{font-size:21px}.opt span.l{font-size:15px}}
+.bigtabs{background:var(--bg);display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding-block:10px;margin-top:12px}
+.bigtabs button{font:inherit;font-weight:700;font-size:15px;line-height:1.25;min-height:64px;border-radius:12px;border:1px solid var(--border);background:var(--surface);color:var(--ink);cursor:pointer;padding:6px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
+.bigtabs button .n{font-weight:400;font-size:13px;color:var(--muted)}
+.bigtabs button[aria-selected="true"]{background:var(--primary);border-color:var(--primary);color:var(--on-primary)}
+.bigtabs button[aria-selected="true"] .n{color:var(--on-primary)}
+.intro{color:var(--muted);margin:14px 0}
+a.btn{display:inline-flex!important;align-items:center;justify-content:center;text-decoration:none}
+.orgtop h3{min-width:0}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.flags{display:flex;flex-wrap:wrap;gap:6px;margin:-2px 0 2px}
+.flag{display:inline-block;font-size:13px;font-weight:600;line-height:1.3;padding:3px 10px;border-radius:999px;border:1px solid transparent}
+.fl-income{background:var(--accent-soft);color:var(--ink);border-color:var(--accent)}
+.fl-local{background:var(--primary-soft);color:var(--ink);border-color:var(--primary)}
+.fl-work{background:var(--sand);color:var(--ink);border-color:var(--border)}
+.legend{margin:-6px 0 14px;line-height:2}
+.flagbox{background:var(--accent-soft);border-inline-start:4px solid var(--accent);border-radius:10px;padding:12px 14px}
+.flagbox ul{margin:6px 0 0;padding-inline-start:18px}.flagbox li{margin:4px 0}
+.catcols{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:12px;margin-top:8px}
+.catcols .choice{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:76px;padding:12px 12px;line-height:1.3;text-wrap:balance}
+.catcols .choice .hint{margin-top:4px;line-height:1.35;text-wrap:balance}
+.cgh{font-size:16px;margin:0 0 10px;color:var(--ink);line-height:1.35}
+@media (max-width:420px){.catcols{gap:10px}.catcols .choice{font-size:16px;padding:10px 8px;min-height:72px}.catcols .hint{font-size:13px}}
+.fl-kids{background:#FFFFFF;color:var(--ink);border-color:var(--primary);border-style:dashed}
+.kidsh{margin-top:36px;padding-top:18px;border-top:1px solid var(--border)}
+.jumps{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 6px}
+.jump{background:var(--surface);border:1px solid var(--primary);color:var(--ink);border-radius:999px;padding:8px 14px;font:inherit;font-size:15px;font-weight:600;cursor:pointer}
+.orgsec:first-of-type{border-top:0;padding-top:0;margin-top:20px}
+.star{color:var(--accent);font-weight:700;margin-inline-start:2px}
+.amountnote{font-size:14px;color:var(--muted);margin:10px 0 0;line-height:1.5}
+.srcs{display:grid;gap:10px;margin:16px 0 8px}
+.src{display:grid;gap:2px;justify-items:start;align-content:start;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 16px}
+.src a{margin-top:4px}
+@media (min-width:700px){.srcs{grid-template-columns:1fr 1fr}}
+.privacy{display:flex;gap:10px;align-items:flex-start;max-width:640px;margin:14px auto 0;text-align:start;color:var(--muted);font-size:15px;line-height:1.5}
+.privacy svg{margin-top:2px}
+.privacy p{margin:0;display:grid;gap:2px}
+.privacy strong{color:var(--ink);font-weight:600}
+.home .notice{max-width:640px;box-sizing:border-box;margin-inline:auto!important}
+.row:has(.btn.sm){align-items:center}
+.contact a.btn,.contact a.btn:visited{color:var(--on-primary)}
+.tabs{gap:6px}
+.tabs button{padding:6px 12px;font-size:14px}
+.sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:absolute;inset-inline-start:12px;top:-60px;z-index:10;background:var(--primary);color:var(--on-primary);border:0;border-radius:10px;padding:10px 16px;font:inherit;font-weight:600}
+.skip:focus{top:12px}
+main:focus{outline:none}
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
+</style>
+</head>
+<body>
+<div id="app" dir="rtl" lang="he"></div>
+<script src="data/site.js"></script>
+<script src="data/rights.js"></script>
+<script src="data/tasks.js"></script>
+<script src="data/organizations.js"></script>
+<script>
+if(!window.DATA_site||!window.DATA_rights||!window.DATA_tasks||!window.DATA_organizations){
+  document.addEventListener('DOMContentLoaded',function(){var a=document.getElementById('app');if(a)a.innerHTML='<div style="padding:40px 16px;text-align:center;font-family:Arial,sans-serif"><h1 style="font-size:22px">אחד מקובצי התוכן לא נטען</h1><p>כנראה נפלה טעות קטנה (פסיק או מירכאות) באחד הקבצים בתיקייה data. כדאי לבטל את השינוי האחרון ב-GitHub ולנסות שוב.</p></div>';});
+  throw new Error('data file failed to load');
+}
+</script>
+<script>
+const SITE=window.DATA_site, RIGHTS=window.DATA_rights, TASKS=window.DATA_tasks, ORGS=window.DATA_organizations;
+const IC={rights:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 14l2 2 4-4"/></svg>',
+orgs:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="16.5" cy="9" r="2.5"/><path d="M3 20c0-3 2.5-5 5-5s5 2 5 5"/><path d="M13.5 15.5c.9-.6 1.9-1 3-1 2.3 0 4.5 1.8 4.5 4.5"/></svg>',
+tasks:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M3.5 6l1.2 1.2L6.8 5M3.5 12l1.2 1.2 2.1-2.2M3.5 18l1.2 1.2 2.1-2.2"/></svg>'};
+const TABS=[['rights','מה מגיע לי','זכויות, קצבאות ומענקים'],['orgs','ארגונים ועמותות','ליווי, תמיכה ופעילויות לילדים'],['tasks','מה לעשות ומתי','צעד אחר צעד, מהיום הראשון']];
+const S={done:false,open:{},returnY:0,tab:'rights',view:'home',cat:null,catSkipped:false,ages:[],kidsSkipped:true,count:0,stage:null,showAllTasks:false,showAllRights:false,showAllOrgs:false,id:null,back:'my'};
+const LEAF='<svg viewBox="0 0 32 32" width="__W__" height="__W__" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true" style="color:var(--primary)"><path d="M16 28V12"/><path d="M16 18c-5 0-8-3-8-8 5 0 8 3 8 8z"/><path d="M16 14c4 0 7-2.5 7-7-4 0-7 2.5-7 7z"/></svg>';
+const leaf=w=>LEAF.replace(/__W__/g,w);
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const asof=s=>esc(s).replace('{asOf}','<span class="ltr">'+SITE.asOf+'</span>');
+function visible(it){
+  if(S.cat && !it.categories.includes('all') && !it.categories.includes(S.cat)) return false;
+  if(S.kidsSkipped) return true;
+  const a=S.ages;
+  if(it.kidsRule==='noKidsOnly') return a.length===0;
+  if(it.kidsRule==='childInRange') return a.some(x=>x>=it.childAgeMin&&x<=it.childAgeMax);
+  return true;
+}
+const catLabel=id=>(SITE.categories.find(c=>c.id===id)||{}).label;
+function ageWord(n){return n===0?'מתחת לשנה':n>=30?'30 ומעלה':String(n)}
+function summaryText(){
+  return S.cat?'סיבת הפטירה של בן/בת הזוג: '+catLabel(S.cat):'מוצג כל המידע';
+}
+function backToList(){if(S.fromList){S.fromList=false;history.back();return}const y=S.returnY;Object.assign(S,{view:'my',menu:false});render();requestAnimationFrame(()=>window.scrollTo(0,y));}
+function go(v,extra){Object.assign(S,{view:v,menu:false},extra||{});PUSH=true;render();window.scrollTo(0,0)}
+function header(){
+  const cur=S.view==='my'?S.tab:S.view;
+  const item=(id,label,icon,attr)=>`<button ${attr} ${cur===id?'aria-current="page"':''}>${icon||''}<span>${label}</span></button>`;
+  const items=item('home','דף הבית',leaf(20),'data-go="home"')+item('rights','מה מגיע לי',IC.rights,'data-tabgo="rights"')+item('orgs','ארגונים ועמותות',IC.orgs,'data-tabgo="orgs"')+item('tasks','מה לעשות ומתי',IC.tasks,'data-tabgo="tasks"')+item('about','מקורות המידע','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>','data-go="about"');
+  return `<header class="top"><button class="brand" data-go="home"><svg viewBox="18 28 124 112" width="34" height="31" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M22 136C22 100 36 76 60 72C80 74 92 96 94 136Z" fill="var(--primary-soft)" stroke="var(--primary)" stroke-width="2.5"/>
+<path d="M66 136C68 102 82 80 104 78C126 80 138 102 138 136Z" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
+<circle cx="62" cy="48" r="17" fill="var(--primary-soft)" stroke="var(--primary)" stroke-width="2.5"/>
+<circle cx="91" cy="53" r="16" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
+<path d="M70 92C88 84 112 88 124 106" stroke="var(--primary)" stroke-width="7"/>
+<path d="M92 98C76 92 54 96 42 112" stroke="var(--accent)" stroke-width="7"/>
+
+</svg><span class="bt">${esc(SITE.siteName)}</span></button>
+  <button class="menubtn" data-act="menu" aria-expanded="${!!S.menu}" aria-controls="mainmenu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>תפריט</span></button>
+  <nav class="mainnav" id="mainmenu" aria-label="תפריט ראשי" ${S.menu?'data-open':''}>${items}</nav></header>`;
+}
+function footer(){
+  return `<footer class="site"><p>${asof(SITE.disclaimer.footer)}</p><p>לעדכונים והצעות: <span class="ltr">${esc(SITE.contactEmail)}</span> · <button class="linkbtn" data-go="about">מקורות המידע</button></p></footer>`;
+}
+function viewHome(){
+  return `<div class="home"><svg viewBox="0 0 160 140" width="150" height="131" class="embrace" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M22 136C22 100 36 76 60 72C80 74 92 96 94 136Z" fill="var(--primary-soft)" stroke="var(--primary)" stroke-width="2.5"/>
+<path d="M66 136C68 102 82 80 104 78C126 80 138 102 138 136Z" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
+<circle cx="62" cy="48" r="17" fill="var(--primary-soft)" stroke="var(--primary)" stroke-width="2.5"/>
+<circle cx="91" cy="53" r="16" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
+<path d="M70 92C88 84 112 88 124 106" stroke="var(--primary)" stroke-width="7"/>
+<path d="M92 98C76 92 54 96 42 112" stroke="var(--accent)" stroke-width="7"/>
+
+</svg><h1>אנחנו כאן איתך</h1><p class="welcome">אם הגעת לכאן, כנראה שאיבדת את האדם הכי קרוב לך. אין מילים שיקלו על הכאב, אבל אפשר להקל על הדרך. ריכזנו בשבילך את מה שחשוב לדעת – בקצב שלך, בלי לחץ.</p>
+  <p class="lead" style="margin-bottom:0;max-width:34ch">מקום אחד שעושה סדר לאלמנות ולאלמנים: מה הזכויות שלך, אילו ארגונים ועמותות יכולים ללוות ולעזור, ואיך מתמודדים עם הבירוקרטיה – צעד אחר צעד.</p><h2 style="margin:28px 0 0;font-size:22px">במה אפשר לעזור לך?</h2>
+  <div class="options">${TABS.map(([id,ti,l])=>`<button class="opt" data-start="${id}"><span class="ic">${IC[id]}</span><b>${ti}</b><span class="l">${l}</span></button>`).join('')}</div>
+  ${S.done&&S.cat?`<p class="notice" style="background:var(--primary-soft);margin:0 0 4px;justify-content:center;font-size:17px;flex-wrap:wrap"><span><strong>המידע מותאם לך לפי:</strong> ${esc(summaryText())}</span> <button class="linkbtn" data-act="change">לשנות את התשובה</button></p>`:`<p class="notice" style="background:var(--primary-soft);margin:0 0 4px;justify-content:center;font-size:17px"><span><strong>מותאם אישית:</strong> הצגת מידע רלוונטי עבורך לפי סיבת הפטירה של בן או בת הזוג. ניתן גם לקבל את כל המידע בלי סינון.</span></p>`}
+  <div class="privacy"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" style="flex:none;color:var(--primary)"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><p>${SITE.disclaimer.privacyShort.split('\n').map((x,i)=>i?`<span>${esc(x)}</span>`:`<strong>${esc(x)}</strong>`).join('')}</p></div>
+  <div class="dedication"><span aria-hidden="true" style="display:block;width:48px;height:1px;background:var(--accent)"></span><p>${esc(SITE.dedication)}</p></div><p class="small muted" style="margin-top:24px">המידע באתר נכון ל-<span class="ltr">${SITE.asOf}</span> ואינו מחליף בדיקה מול הגוף הרשמי. הוא אינו ייעוץ משפטי.</p></div>`;
+}
+function viewQ1(){
+  const card=c=>`<button class="choice" role="radio" aria-checked="${S.cat===c.id}" data-cat="${c.id}">${esc(c.label)}${c.hint?`<span class="hint">${esc(c.hint)}</span>`:''}</button>`;
+  const R=SITE.categories.filter(c=>c.group===SITE.categoryGroups[0].id),L=SITE.categories.filter(c=>c.group===SITE.categoryGroups[1].id);
+  let groups='';for(let i=0;i<Math.max(R.length,L.length);i++){groups+=(R[i]?card(R[i]):'<span></span>')+(L[i]?card(L[i]):'<span></span>');}
+  return `<div class="progress">שאלה אחת · <span style="white-space:nowrap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" style="flex:none;color:var(--primary)"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> התשובה לא נשמרת</span></div><h1>מה הייתה סיבת הפטירה של בן או בת הזוג?</h1><p class="muted">לכל סיבה יש זכויות, ארגונים ועמותות אחרים – כך נוכל להציג לך רק את מה שרלוונטי <strong>לך</strong>.</p><div class="catcols" role="radiogroup" aria-label="סיבת הפטירה">${groups}</div>
+  <div class="row"><button class="btn ghost" data-act="skip1">לדלג ולראות את כל המידע, בלי סינון</button></div>`;
+}
+const ORD=['ראשון/ה','שני/ה','שלישי/ת','רביעי/ת','חמישי/ת','שישי/ת','שביעי/ת','שמיני/ת','תשיעי/ת','עשירי/ת'];
+function viewQ2(){
+  let rows='';
+  for(let i=0;i<S.count;i++){
+    let opts='';for(let a=0;a<=30;a++)opts+=`<option value="${a}" ${S.ages[i]===a?'selected':''}>${ageWord(a)}</option>`;
+    rows+=`<label class="agerow" for="age${i}"><span>הגיל היום – ילד/ה ${ORD[i]}</span><select id="age${i}" data-age="${i}"><option value="" ${S.ages[i]==null?'selected':''}>בחירת גיל</option>${opts}</select></label>`;
+  }
+  const ready=S.ages.slice(0,S.count).filter(x=>x!=null).length===S.count;
+  return `<div class="progress">שאלה 2 מתוך 2 · <span style="white-space:nowrap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" style="flex:none;color:var(--primary)"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> התשובה לא נשמרת</span></div><h1>ילדים – והגיל שלהם היום</h1><p class="muted">הגיל <strong>היום</strong>, ולא הגיל בזמן הפטירה. לפי הגיל נדע אילו זכויות ומענקים רלוונטיים עכשיו.</p>
+  <p>כמה ילדים יש לך?</p><div class="stepper"><button data-act="plus" aria-label="הוספת ילד">+</button><output>${S.count}</output><button data-act="minus" aria-label="הסרת ילד">−</button></div>
+  ${S.count===0?'<p class="muted">אין ילדים? אפשר להשאיר 0 ולהמשיך.</p>':rows}
+  <div class="row" style="margin-top:18px"><button class="btn" data-act="done2" ${ready?'':'disabled'}>תציג לי את מה שרלוונטי לי</button><button class="btn ghost" data-act="skip2">לדלג ולראות את כל המידע, בלי סינון</button></div>`;
+}
+function taskCond(t){if(t.condition)return t.condition;if(t.kidsRule==='noKidsOnly')return 'אם אין ילדים';
+  if(t.kidsRule==='childInRange')return t.childAgeMin>0?`אם יש ילדים בגיל ${t.childAgeMin}–${t.childAgeMax}`:`אם יש ילדים עד גיל ${t.childAgeMax}`;return '';}
+function taskHtml(t){
+  const more=[t.what&&`<p style="margin:0">${esc(t.what)}</p>`,t.withWhom&&`<div><span class="label">מול מי</span>${esc(t.withWhom)}</div>`,t.documents&&`<div><span class="label">מסמכים</span>${esc(t.documents)}</div>`,t.timing&&`<div><span class="label">מתי</span>${esc(t.timing)}</div>`,t.link&&`<a href="${esc(t.link)}" target="_blank" rel="noopener noreferrer">לפרטים ולמקור המידע</a>`].filter(Boolean).join('');
+  const goBtn=t.goTab?`<div><button class="linkbtn" data-tabgo="${t.goTab}">לרשימת הארגונים והעמותות ←</button></div>`:'';
+  const op=!!S.open[t.id];
+  return `<div class="task" id="task-${t.id}" ${op?'open':''}><button aria-expanded="${op}" data-task="${t.id}"><span>${taskCond(t)?`<span class="cond">${esc(taskCond(t))}</span>`:''}${esc(t.title)}</span><span class="chev" aria-hidden="true">⌄</span></button><div class="more" ${op?'':'hidden'}>${more}${goBtn}</div></div>`;
+}
+const FLAGCLS={income:'fl-income',local:'fl-local',work:'fl-work'};
+const flagBadges=r=>((r.flags||[]).length||ageText(r))?`<div class="flags">${agePill(r)}${(r.flags||[]).map(f=>`<span class="flag ${FLAGCLS[f.type]||''}">${esc(f.label)}</span>`).join('')}</div>`:'';
+const flagBox=r=>(r.flags||[]).length?`<section class="flagbox"><span class="label">חשוב לדעת לפני שמגישים</span><ul>${r.flags.map(f=>`<li><strong>${esc(f.label)}:</strong> ${esc(f.text)}</li>`).join('')}</ul></section>`:'';
+function ageText(it){if(it.kidsRule==='noKidsOnly')return 'רק למי שאין ילדים';if(it.kidsRule!=='childInRange')return '';
+  const who=it.childAgeMax>18?'לילדים ולצעירים':'לילדים';return it.childAgeMin>0?`${who} בגיל ${it.childAgeMin}–${it.childAgeMax}`:`${who} עד גיל ${it.childAgeMax}`;}
+const agePill=it=>ageText(it)?`<span class="flag fl-kids">${ageText(it)}</span>`:((it.helpTags&&it.kidsRule==='any'&&it.helpTags.includes('ילדים ונוער'))?'<span class="flag fl-kids">גם לילדים</span>':'');
+function rightCard(r){
+  return `<article class="card"><h3>${esc(r.title)}</h3>${flagBadges(r)}<p style="margin:0">${esc(r.summary)}</p>${r.amount?`<p class="amount" style="margin:0">${esc(r.amount)}<span class="star" aria-hidden="true">*</span></p>`:''}<div><button class="linkbtn" data-right="${r.id}">לפרטים</button></div></article>`;
+}
+const LOGO_EXT=['png','jpg','svg','webp'],LOGO={};
+function logoOk(img){LOGO[img.dataset.id]=img.getAttribute('src');}
+function nextLogo(img){const i=+img.dataset.i+1;
+  if(i<LOGO_EXT.length){img.dataset.i=i;img.src='logos/'+img.dataset.id+'.'+LOGO_EXT[i];}
+  else{LOGO[img.dataset.id]=false;const t=img.parentNode;t.classList.remove('has');t.setAttribute('role','img');t.setAttribute('aria-label',img.alt);img.outerHTML=leaf(t.classList.contains('big')?36:28);}}
+function tile(o,big){const known=LOGO[o.id];const src=known===false?null:(known||'logos/'+o.id+'.png');
+  return src?`<div class="tile has${big?' big':''}"><img src="${src}" data-id="${o.id}" data-i="${known?LOGO_EXT.length-1:0}" alt="${esc(o.name)}" onload="logoOk(this)" onerror="nextLogo(this)"></div>`
+            :`<div class="tile${big?' big':''}" role="img" aria-label="${esc(o.name)}">${leaf(big?36:28)}</div>`;}
+function orgCard(o){
+  const action=o.registerUrl?`<a class="btn sm" href="${esc(o.registerUrl)}" target="_blank" rel="noopener noreferrer">להרשמה</a>`:o.website?`<a class="btn sm" href="${esc(o.website)}" target="_blank" rel="noopener noreferrer">לאתר</a>`:o.phone?`<span class="btn secondary ltr" style="display:inline-block">${esc(o.phone.display)}</span>`:'';
+  return `<article class="card"><div class="orgtop">${tile(o,false)}<div><h3>${esc(o.name)}</h3>${agePill(o)?`<div class="flags" style="margin-top:4px">${agePill(o)}</div>`:''}</div></div>
+  <p style="margin:0">${esc(o.oneLiner)}</p><div class="pills">${o.helpTags.slice(0,3).map(t=>`<span class="pill">${esc(t)}</span>`).join('')}</div>
+  <div class="row">${action}<button class="linkbtn" data-org="${o.id}">עוד פרטים</button></div></article>`;
+}
+function summaryBlock(){const none=!S.cat;return (none?`<div class="summary"><strong>מוצג כל המידע, בלי התאמה אישית.</strong><button class="linkbtn" data-go="q1">רוצה לסנן לפי סיבת הפטירה? שאלה אחת קצרה</button></div>`:`<p style="margin:0 0 6px;color:var(--ink)">תודה ששיתפת. אין צורך לטפל בהכול היום – אפשר לחזור לכאן בכל זמן.</p><p class="small muted" style="margin:0 0 2px">מוצג לך מידע מותאם אישית, לפי:</p><div class="summary"><strong>${esc(summaryText())}</strong><button class="linkbtn" data-go="q1">לשנות</button></div>`)+`
+  <div class="notice" role="note"><span aria-hidden="true">ⓘ</span><span>${asof(SITE.disclaimer.resultsNotice)}</span></div>`}
+function verifyHtml(){return `<div class="verify">${SITE.verifyContacts.map(v=>`<div class="vrow"><strong>${esc(v.name)}</strong><div class="vact">${v.phone?`<a class="vbtn" dir="ltr" href="tel:${esc(v.phone.tel)}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><bdi dir="ltr">${esc(v.phone.display)}</bdi></a>`:''}${v.url?`<a class="vbtn" href="${esc(v.url)}" target="_blank" rel="noopener noreferrer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>לאתר</a>`:''}</div></div>`).join('')}</div>`;}
+function viewMy(){
+  const rights=RIGHTS.filter(visible), orgs=ORGS.filter(visible), tasks=TASKS.filter(visible);
+  const cnt={rights:rights.length,orgs:orgs.length,tasks:tasks.length};
+  const verify=verifyHtml();
+  const tabs=`<div class="bigtabs" role="tablist" aria-label="מה אפשר לראות">${TABS.map(([id,ti])=>`<button role="tab" aria-selected="${S.tab===id}" data-tab="${id}">${ti}<span class="n">${cnt[id]} ${({rights:'זכויות',orgs:'ארגונים',tasks:'פעולות'})[id]}</span></button>`).join('')}</div>`;
+  let body='';
+  if(S.tab==='rights'){const ic=SITE.infoCard;
+    body=`<p class="intro">זכויות, קצבאות ומענקים שמתאימים <strong>לך</strong>. לחיצה על 'לפרטים' מסבירה למי מגיע, כמה ואיך מגישים. זכויות עבור הילדים מופיעות בנפרד, <button class="linkbtn" data-jump="kids-rights">בהמשך העמוד</button>.</p><p class="small muted legend"><span class="flag fl-income">תלוי בהכנסה</span> הזכאות או הסכום תלויים בהכנסה · <span class="flag fl-local">תלוי ברשות המקומית</span> משתנה בין ערים</p><div class="cards">${rights.filter(r=>r.kidsRule!=='childInRange').map(rightCard).join('')}</div><p class="amountnote">${asof(SITE.disclaimer.amountNote)}</p>
+    ${rights.some(r=>r.kidsRule==='childInRange')?`<h2 class="kidsh" id="kids-rights">בשביל הילדים</h2><p class="intro">זכויות ומענקים עבור הילדים. בכל אחת כתוב לאיזה גיל היא מתאימה – לפי הגיל של הילדים <strong>היום</strong>.</p><div class="cards">${rights.filter(r=>r.kidsRule==='childInRange').map(rightCard).join('')}</div><p class="amountnote">${asof(SITE.disclaimer.amountNote)}</p>`:''}
+    <aside class="info"><h3>${esc(ic.title)}</h3><ul>${ic.points.map(p=>`<li>${esc(p)}</li>`).join('')}</ul></aside>`;}
+  if(S.tab==='orgs'){body=`<p class="intro"><strong style="color:var(--ink)">את לא לבד – וגם אתה לא.</strong> הארגונים והעמותות כאן לא מחליפים את הזכויות והקצבאות – הם נותנים <strong>ליווי ותמיכה רגשית</strong>, קבוצות תמיכה, עזרה מעשית ו<strong>פעילויות לילדים</strong>, עם אנשים שעברו את הדרך הזו ויכולים להבין. חלקם גם מסייעים כלכלית. קודם מופיעים אלה שמיועדים במיוחד למצב שלך.</p>${(()=>{const KID='ילדים ונוער';const forYou=orgs.filter(o=>o.kidsRule!=='childInRange'&&!o.helpTags.includes(KID)),fam=orgs.filter(o=>o.kidsRule!=='childInRange'&&o.helpTags.includes(KID)),kids=orgs.filter(o=>o.kidsRule==='childInRange');
+      const secs=[['org-you','בשבילך','ליווי, תמיכה רגשית וקבוצות – בשבילך.',forYou],['org-fam','לך ולילדים – לכל המשפחה','ארגונים שמלווים גם את ההורה וגם את הילדים – קבוצות, נופשים ופעילויות משפחתיות.',fam],['org-kids','לילדים ולנוער','ארגונים שמיועדים לילדים ולבני נוער שהתייתמו – קבוצות, חונכות, מחנות ופעילויות. בכל אחד כתוב לאיזה גיל הוא מתאים.',kids]].filter(x=>x[3].length);
+      return (secs.length>1?`<div class="jumps" aria-label="קפיצה לחלק">${secs.map(x=>`<button class="pill jump" data-jump="${x[0]}">${x[1]} <span class="muted">(${x[3].length})</span></button>`).join('')}</div>`:'')+
+        secs.map(x=>`<h2 class="kidsh orgsec" id="${x[0]}">${x[1]}</h2><p class="intro">${x[2]}</p><div class="cards orgs">${x[3].map(orgCard).join('')}</div>`).join('');})()}`;}
+  if(S.tab==='tasks'){
+    const stages=SITE.stages.filter(s=>tasks.some(t=>t.stage===s.id));
+    if(!S.stage||!stages.some(s=>s.id===S.stage)) S.stage=stages[0]&&stages[0].id;
+    const st=tasks.filter(t=>t.stage===S.stage);
+    body=`<p class="intro">הפעולות מסודרות לפי זמן – מהימים הראשונים ועד מה שחוזר כל שנה, כדי לא לפספס כסף או זכות. כל שורה נפתחת ומסבירה מה עושים, מול מי ואילו מסמכים צריך. אין צורך לעשות הכול בבת אחת.</p>
+    <div class="notice" style="background:var(--primary-soft);margin-top:0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" style="flex:none;color:var(--primary);margin-top:3px"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>${esc(SITE.disclaimer.tasksLateNotice)}</span></div>
+    <div class="tabs" role="tablist" style="margin-top:16px">${stages.map(s=>`<button role="tab" aria-selected="${s.id===S.stage}" data-stage="${s.id}">${esc(s.label)}</button>`).join('')}</div>
+    <div class="tasks">${st.map(taskHtml).join('')}</div>`;}
+  return `<h1 class="sr">${({rights:'מה מגיע לי',orgs:'ארגונים ועמותות',tasks:'מה לעשות ומתי'})[S.tab]}</h1>`+summaryBlock()+tabs+body+`<h2>רוצה לוודא או לקבל עזרה אישית?</h2>${verify}`;
+}
+function viewRight(){
+  const r=RIGHTS.find(x=>x.id===S.id);
+  const sec=(l,v)=>v?`<section><span class="label">${l}</span>${esc(v)}</section>`:'';
+  return `<button class="linkbtn" data-act="back">→ חזרה</button><div class="detail" style="margin-top:14px"><h1>${esc(r.title)}</h1>
+  ${sec('בקצרה',r.summary)}${flagBox(r)}${sec('למי מגיע',r.eligibility)}${r.amount?`<section><span class="label">כמה</span>${esc(r.amount)}<span class="star" aria-hidden="true">*</span><p class="amountnote">${asof(SITE.disclaimer.amountNote)}</p></section>`:''}${sec('איך מגישים',r.howToApply)}${sec('עד מתי',r.deadline)}
+  ${r.note?`<p class="note">${esc(r.note)}</p>`:''}
+  <p><a class="btn" style="text-decoration:none;display:inline-block" href="${esc(r.officialUrl)}" target="_blank" rel="noopener noreferrer">לאתר הרשמי</a></p>
+  <p class="asof">${asof(SITE.disclaimer.card.replace('{asOf}',r.asOf))} · <a href="${esc(r.sourceUrl)}" target="_blank" rel="noopener noreferrer">מקור</a></p></div>`;
+}
+function viewOrg(){
+  const o=ORGS.find(x=>x.id===S.id);
+  const dom=x=>x.replace(/^https?:\/\//,'').replace(/^www\./,'').split(/[\/?#]/)[0];
+  const pills=[o.website&&`<a class="vbtn" href="${esc(o.website)}" target="_blank" rel="noopener noreferrer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span dir="ltr">${esc(dom(o.website))}</span></a>`,
+    o.phone&&`<a class="vbtn" dir="ltr" href="tel:${esc(o.phone.tel)}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>${esc(o.phone.display)}</span></a>`,
+    o.whatsapp&&`<a class="vbtn" dir="ltr" href="https://wa.me/${esc(o.whatsapp.replace(/^\+/,''))}" target="_blank" rel="noopener noreferrer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.5L3.5 20.5l1.4-4.2a8.5 8.5 0 1 1 15.6-4.7z"/></svg><span>${esc(o.whatsapp.replace('+972','0').replace(/^(05\d)(\d{7})$/,'$1-$2'))}</span></a>`,
+    o.email&&`<a class="vbtn" dir="ltr" href="mailto:${esc(o.email)}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>${esc(o.email)}</span></a>`].filter(Boolean).join('');
+  const c=(o.registerUrl?`<a class="btn sm" href="${esc(o.registerUrl)}" target="_blank" rel="noopener noreferrer">להרשמה</a>`:'')
+    +(pills?`<section><span class="label">יצירת קשר</span><div class="vact">${pills}</div>${o.phoneHours?`<span class="muted small">שעות מענה טלפוני: ${esc(o.phoneHours)}</span>`:''}</section>`:'')
+    +(o.howToJoin?`<section><span class="label">איך מצטרפים</span>${esc(o.howToJoin)}</section>`:'');
+  return `<button class="linkbtn" data-act="back">→ חזרה</button><div class="detail" style="margin-top:14px">
+  ${tile(o,true)}<h1 style="margin-top:14px">${esc(o.name)}</h1>
+  <section><span class="label">למי</span>${esc(o.audience)}</section><section><span class="label">מה עושים שם</span>${esc(o.oneLiner)}</section><section><span class="label">איפה</span>${esc(o.location)}</section>
+  <div class="contact">${c}</div><p class="asof" style="margin-top:16px">*המידע נכון ל-<span class="ltr">${o.asOf}</span> · <a href="${esc(o.sourceUrl)}" target="_blank" rel="noopener noreferrer">מקור: אתר העמותה</a></p></div>`;
+}
+function viewAbout(){
+  const verify=verifyHtml();
+  const src=SITE.sources.map(x=>`<div class="src"><strong>${esc(x.name)}</strong><span class="muted small">${esc(x.about)}</span>${x.url?`<a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">לאתר</a>`:''}</div>`).join('');
+  return `<h1>מקורות המידע</h1><p>כל המידע באתר נבדק מול מקורות רשמיים ומול אתרי הארגונים, ונכון ל-<span class="ltr">${SITE.asOf}</span>. ליד כל זכות, ארגון ופעולה באתר יש קישור למקור שלו.</p>
+  <div class="srcs">${src}</div>
+  <h2>מי אנחנו</h2><p>${esc(SITE.disclaimer.volunteerNote)}</p><div class="dedication" style="margin-top:12px"><span aria-hidden="true" style="display:block;width:48px;height:1px;background:var(--accent)"></span><p>${esc(SITE.dedication)}</p></div><h2>פרטיות</h2><p>${esc(SITE.disclaimer.privacyLong)}</p><h2>חשוב לדעת</h2><p>${esc(SITE.disclaimer.aboutPage)}</p><p>לעדכונים והצעות: <span class="ltr">${esc(SITE.contactEmail)}</span></p>
+  <h2>רוצה לוודא או לקבל עזרה אישית?</h2>${verify}`;
+}
+const HKEYS=['done','view','tab','cat','catSkipped','ages','kidsSkipped','count','id','back','stage'];
+function stateHash(){const p=new URLSearchParams();HKEYS.forEach(k=>{const v=S[k];if(v==null||v===false||(Array.isArray(v)&&!v.length))return;p.set(k,Array.isArray(v)?v.join('.'):String(v));});
+  const s=p.toString();return s?'#'+s:'#';}
+function readHash(){const p=new URLSearchParams(location.hash.slice(1));
+  Object.assign(S,{done:false,view:'home',tab:'rights',cat:null,catSkipped:false,ages:[],kidsSkipped:true,count:0,id:null,back:'my',stage:null,menu:false});
+  if(p.get('view')&&['home','q1','q2','my','right','org','about'].includes(p.get('view')))S.view=p.get('view');
+  if(['rights','orgs','tasks'].includes(p.get('tab')))S.tab=p.get('tab');
+  if(p.get('cat')&&SITE.categories.some(c=>c.id===p.get('cat')))S.cat=p.get('cat');
+  S.catSkipped=p.get('catSkipped')==='true';S.done=p.get('done')==='true';
+  S.kidsSkipped=p.get('kidsSkipped')==='true';
+  S.ages=(p.get('ages')||'').split('.').filter(x=>x!=='').map(Number).filter(n=>n>=0&&n<=40);
+  S.count=Math.min(10,+p.get('count')||S.ages.length);
+  S.id=p.get('id');S.back=p.get('back')||'my';S.stage=p.get('stage');
+  if((S.view==='right'&&!RIGHTS.some(r=>r.id===S.id))||(S.view==='org'&&!ORGS.some(o=>o.id===S.id)))S.view='home';}
+let PUSH=false;
+function render(){
+  if(S.view==='my'&&!S.done)S.view='q1';
+  const v={home:viewHome,q1:viewQ1,q2:viewQ1,my:viewMy,right:viewRight,org:viewOrg,about:viewAbout}[S.view]();
+  document.getElementById('app').innerHTML='<button class="skip" data-act="skipmain">דילוג לתוכן</button>'+header()+'<main id="main" tabindex="-1">'+v+'</main>'+'<div class="helpline">רוצה לדבר עם מישהו? <strong>ער"ן <span class="ltr">1201</span></strong> · כל שעה</div>'+footer();
+  const h=stateHash();if(h!==(location.hash||'#')){try{history[PUSH?'pushState':'replaceState'](null,'',h)}catch(e){}}PUSH=false;
+}
+window.addEventListener('popstate',()=>{const was=S.view;readHash();render();const y=(S.view==='my'&&(was==='right'||was==='org'))?S.returnY:0;requestAnimationFrame(()=>window.scrollTo(0,y))});
+document.addEventListener('click',e=>{
+  const b=e.target.closest('button');if(!b)return;
+  if(b.dataset.go){go(b.dataset.go);return}
+  if(b.dataset.cat){go('my',{done:true,cat:b.dataset.cat,catSkipped:false,kidsSkipped:true,ages:[],count:0,showAllTasks:false,showAllRights:false,showAllOrgs:false});return}
+  if(b.dataset.tab){S.tab=b.dataset.tab;render();const bt=document.querySelector('.bigtabs');if(bt&&window.scrollY>bt.offsetTop)bt.scrollIntoView();return}
+  if(b.dataset.tabgo){go(S.done?'my':'q1',{tab:b.dataset.tabgo});return}
+  if(b.dataset.start){go(S.done?'my':'q1',{tab:b.dataset.start});return}
+  if(b.dataset.jump){document.getElementById(b.dataset.jump).scrollIntoView({behavior:'smooth'});return}
+  if(b.dataset.stage){S.stage=b.dataset.stage;S.showAllTasks=false;render();return}
+  if(b.dataset.right){S.returnY=window.scrollY;S.fromList=S.view==='my';go('right',{id:b.dataset.right});return}
+  if(b.dataset.org){if(S.view==='my')S.returnY=window.scrollY;S.fromList=S.view==='my';go('org',{id:b.dataset.org});return}
+  if(b.dataset.task){const m=b.nextElementSibling;const open=m.hidden;S.open[b.dataset.task]=open;m.hidden=!open;b.setAttribute('aria-expanded',open);b.parentElement.toggleAttribute('open',open);return}
+  const a=b.dataset.act;
+  if(a==='skipmain'){const m=document.getElementById('main');m&&m.focus();return}
+  if(a==='back'){backToList();return}
+  if(a==='menu'){S.menu=!S.menu;render();return}
+  if(a==='showall'){go('my',{cat:null,catSkipped:true,kidsSkipped:true,ages:[],count:0,done:true,tab:'rights'})}
+  if(a==='change'){go('q1');return}
+  if(a==='skip1'){go('my',{done:true,cat:null,catSkipped:true,kidsSkipped:true,ages:[],count:0})}
+  if(a==='plus'&&S.count<10){S.count++;render()}
+  if(a==='minus'&&S.count>0){S.count--;S.ages=S.ages.slice(0,S.count);render()}
+  if(a==='done2'){go('my',{done:true,kidsSkipped:false,ages:S.ages.slice(0,S.count),showAllTasks:false,showAllRights:false,showAllOrgs:false})}
+  if(a==='skip2'){go('my',{done:true,kidsSkipped:true,ages:[]})}
+  if(a==='moreT'){S.showAllTasks=true;render()}
+  if(a==='moreR'){S.showAllRights=true;render()}
+  if(a==='moreO'){S.showAllOrgs=true;render()}
+});
+document.addEventListener('change',e=>{const s=e.target;if(s.dataset.age!=null){S.ages[+s.dataset.age]=s.value===''?null:+s.value;render();const n=document.getElementById('age'+s.dataset.age);n&&n.focus()}});
+if(location.hash.length>1)readHash();
+render();
+</script>
+</body>
+</html>
