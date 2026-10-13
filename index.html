@@ -6,6 +6,7 @@
 <meta name="description" content="מקום אחד שעושה סדר לאלמנות ולאלמנים בישראל: זכויות, קצבאות ומענקים, ארגונים ועמותות, ומה לעשות ומתי – מותאם אישית, בלי הרשמה.">
 <meta name="referrer" content="no-referrer">
 <meta name="theme-color" content="#FAF6F0">
+<meta name="color-scheme" content="only light">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="he_IL">
 <meta property="og:title" content="מידע לאלמנות ולאלמנים">
@@ -26,8 +27,6 @@
 /* Layout: the real site's mobile-first single column (max 720px), RTL, calm sage + sand palette from the spec */
 :root{--bg:#FAF6F0;--sand:#ECE3D6;--primary:#5F7A6A;--primary-soft:#DDE6DF;--ink:#3E5547;--accent:#B9785C;--accent-soft:#F3E3D8;--text:#33302C;--muted:#5A544E;--border:#E2D8CA;--surface:#FFFFFF;--on-primary:#FFFFFF;
 --display:"Frank Ruhl Libre","David Libre",Georgia,serif;--body:"Assistant","Noto Sans Hebrew",Arial,sans-serif}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#1D201E;--sand:#2F332F;--primary:#8FB09C;--primary-soft:#2E3B33;--ink:#C9DCCF;--accent:#D49A7E;--accent-soft:#3A2E28;--text:#ECE7DF;--muted:#B4ADA4;--border:#3A3F3B;--surface:#262A27;--on-primary:#16201A;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#1D201E;--sand:#2F332F;--primary:#8FB09C;--primary-soft:#2E3B33;--ink:#C9DCCF;--accent:#D49A7E;--accent-soft:#3A2E28;--text:#ECE7DF;--muted:#B4ADA4;--border:#3A3F3B;--surface:#262A27;--on-primary:#16201A;color-scheme:dark}
 body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6}
 #app{position:relative;max-width:720px;margin-inline:auto;padding-inline:16px;padding-block:0 40px}
 
@@ -106,6 +105,8 @@ button{font-family:inherit}
 .verify{display:grid;gap:8px}
 .verify .vrow{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 16px;display:grid;gap:8px;align-content:start}
 .vact{display:flex;flex-wrap:wrap;gap:8px 10px}
+.maillink{color:var(--ink);font-weight:700;text-decoration:underline;text-underline-offset:3px;unicode-bidi:isolate;word-break:break-all}
+.tellink{color:var(--ink);font-weight:700;text-decoration:underline;text-underline-offset:3px;unicode-bidi:isolate;white-space:nowrap}
 .vbtn{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:4px 12px;border:1px solid var(--border);border-radius:999px;background:var(--bg);color:var(--ink);text-decoration:none;font-weight:600;font-size:15px}
 .vbtn:hover{border-color:var(--primary);background:var(--primary-soft)}
 .vbtn svg{color:var(--primary);flex:none}
@@ -195,14 +196,20 @@ main:focus{outline:none}
 a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
 .acclist{margin:0;padding-inline-start:20px;display:grid;gap:6px}
 @media (min-width:900px){.mainnav .m-only{display:none!important}}
+:root{color-scheme:only light}
+.pp section{display:grid;gap:4px;margin-top:18px}
+.pp h2{margin:0;font-size:20px}
+.pp p{margin:0}
+.helpline{display:flex;flex-direction:column;align-items:center;gap:8px}
+.hlcall{background:var(--surface)}
 </style>
 </head>
 <body>
 <div id="app" dir="rtl" lang="he"></div>
-<script src="data/site.js"></script>
-<script src="data/rights.js"></script>
-<script src="data/tasks.js"></script>
-<script src="data/organizations.js"></script>
+<script src="data/site.js?v=ae3bdae8"></script>
+<script src="data/rights.js?v=4f7928ca"></script>
+<script src="data/tasks.js?v=89c108ad"></script>
+<script src="data/organizations.js?v=d14319b1"></script>
 <script>
 if(!window.DATA_site||!window.DATA_rights||!window.DATA_tasks||!window.DATA_organizations){
   document.addEventListener('DOMContentLoaded',function(){var a=document.getElementById('app');if(a)a.innerHTML='<div style="padding:40px 16px;text-align:center;font-family:Arial,sans-serif"><h1 style="font-size:22px">אחד מקובצי התוכן לא נטען</h1><p>כנראה נפלה טעות קטנה (פסיק או מירכאות) באחד הקבצים בתיקייה data. כדאי לבטל את השינוי האחרון ב-GitHub ולנסות שוב.</p></div>';});
@@ -238,7 +245,7 @@ function go(v,extra){Object.assign(S,{view:v,menu:false},extra||{});PUSH=true;re
 function header(){
   const cur=S.view==='my'?S.tab:S.view;
   const item=(id,label,icon,attr)=>`<button ${attr} ${cur===id?'aria-current="page"':''}>${icon||''}<span>${label}</span></button>`;
-  const items=item('home','דף הבית',leaf(20),'data-go="home"')+item('rights','מה מגיע לי',IC.rights,'data-tabgo="rights"')+item('orgs','ארגונים ועמותות',IC.orgs,'data-tabgo="orgs"')+item('tasks','מה לעשות ומתי',IC.tasks,'data-tabgo="tasks"')+item('about','מקורות המידע','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>','data-go="about"')+item('access','הצהרת נגישות','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="4.5" r="1.8"/><path d="M5 8.5l7 1.5 7-1.5M12 10v5M12 15l-3.5 6M12 15l3.5 6"/></svg>','data-go="access" class="m-only"');
+  const items=item('home','דף הבית',leaf(20),'data-go="home"')+item('rights','מה מגיע לי',IC.rights,'data-tabgo="rights"')+item('orgs','ארגונים ועמותות',IC.orgs,'data-tabgo="orgs"')+item('tasks','מה לעשות ומתי',IC.tasks,'data-tabgo="tasks"')+item('about','מקורות המידע','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>','data-go="about"')+item('privacy','מדיניות פרטיות','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>','data-go="privacy" class="m-only"')+item('access','הצהרת נגישות','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="4.5" r="1.8"/><path d="M5 8.5l7 1.5 7-1.5M12 10v5M12 15l-3.5 6M12 15l3.5 6"/></svg>','data-go="access" class="m-only"');
   return `<header class="top"><button class="brand" data-go="home"><svg viewBox="18 28 124 112" width="34" height="31" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round">
 <path d="M22 136C22 100 36 76 60 72C80 74 92 96 94 136Z" fill="var(--primary-soft)" stroke="var(--primary)" stroke-width="2.5"/>
 <path d="M66 136C68 102 82 80 104 78C126 80 138 102 138 136Z" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
@@ -252,7 +259,7 @@ function header(){
   <nav class="mainnav" id="mainmenu" aria-label="תפריט ראשי" ${S.menu?'data-open':''}>${items}</nav></header>`;
 }
 function footer(){
-  return `<footer class="site"><p>${asof(SITE.disclaimer.footer)}</p><p>לעדכונים והצעות: <span class="ltr">${esc(SITE.contactEmail)}</span> · <button class="linkbtn" data-go="about">מקורות המידע</button> · <button class="linkbtn" data-go="access">הצהרת נגישות</button></p></footer>`;
+  return `<footer class="site"><p>${asof(SITE.disclaimer.footer)}</p><p>לעדכונים והצעות: <a class="maillink" dir="ltr" href="mailto:${esc(SITE.contactEmail)}">${esc(SITE.contactEmail)}</a> · <button class="linkbtn" data-go="about">מקורות המידע</button> · <button class="linkbtn" data-go="privacy">מדיניות פרטיות</button> · <button class="linkbtn" data-go="access">הצהרת נגישות</button></p></footer>`;
 }
 function viewHome(){
   return `<div class="home"><svg viewBox="0 0 160 140" width="150" height="131" class="embrace" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -316,13 +323,22 @@ function tile(o,big){const known=LOGO[o.id];const src=known===false?null:(known|
   return src?`<div class="tile has${big?' big':''}"><img src="${src}" data-id="${o.id}" data-i="${known?LOGO_EXT.length-1:0}" alt="${esc(o.name)}" onload="logoOk(this)" onerror="nextLogo(this)"></div>`
             :`<div class="tile${big?' big':''}" role="img" aria-label="${esc(o.name)}">${leaf(big?36:28)}</div>`;}
 function orgCard(o){
-  const action=o.registerUrl?`<a class="btn sm" href="${esc(o.registerUrl)}" target="_blank" rel="noopener noreferrer">להרשמה</a>`:o.website?`<a class="btn sm" href="${esc(o.website)}" target="_blank" rel="noopener noreferrer">לאתר</a>`:o.phone?`<span class="btn secondary ltr" style="display:inline-block">${esc(o.phone.display)}</span>`:'';
+  const action=o.registerUrl?`<a class="btn sm" href="${esc(o.registerUrl)}" target="_blank" rel="noopener noreferrer">להרשמה</a>`:o.website?`<a class="btn sm" href="${esc(o.website)}" target="_blank" rel="noopener noreferrer">לאתר</a>`:o.phone?`<a class="btn sm secondary" dir="ltr" href="tel:${esc(o.phone.tel)}" aria-label="להתקשר ל${esc(o.name)}, ${esc(o.phone.display)}">${esc(o.phone.display)}</a>`:'';
   return `<article class="card"><div class="orgtop">${tile(o,false)}<div><h3>${esc(o.name)}</h3>${agePill(o)?`<div class="flags" style="margin-top:4px">${agePill(o)}</div>`:''}</div></div>
   <p style="margin:0">${esc(o.oneLiner)}</p><div class="pills">${o.helpTags.slice(0,3).map(t=>`<span class="pill">${esc(t)}</span>`).join('')}</div>
   <div class="row">${action}<button class="linkbtn" data-org="${o.id}">עוד פרטים</button></div></article>`;
 }
 function summaryBlock(){const none=!S.cat;return (none?`<div class="summary"><strong>מוצג כל המידע, בלי התאמה אישית.</strong><button class="linkbtn" data-go="q1">רוצה לסנן לפי סיבת הפטירה? שאלה אחת קצרה</button></div>`:`<p style="margin:0 0 6px;color:var(--ink)">תודה ששיתפת. אין צורך לטפל בהכול היום – אפשר לחזור לכאן בכל זמן.</p><p class="small muted" style="margin:0 0 2px">מוצג לך מידע מותאם אישית, לפי:</p><div class="summary"><strong>${esc(summaryText())}</strong><button class="linkbtn" data-go="q1">לשנות</button></div>`)+`
   <div class="notice" role="note"><span aria-hidden="true">ⓘ</span><span>${asof(SITE.disclaimer.resultsNotice)}</span></div>`}
+function telify(root){
+  const re=/(\*\d{4}|1-?[78]00-?\d{2,3}-?\d{3,4}|0\d{1,2}-\d{7}|0\d{8,9}|\(\d{3,4}\))/g;
+  const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest('a,button,script,style')?NodeFilter.FILTER_REJECT:(re.lastIndex=0,re.test(n.data)?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_SKIP)});
+  const nodes=[];while(w.nextNode())nodes.push(w.currentNode);
+  nodes.forEach(n=>{const f=document.createDocumentFragment();let last=0;n.data.replace(re,(m,_g,i)=>{
+    let num=m,pre='',post='';if(m[0]==='('){pre='(';post=')';num=m.slice(1,-1);}
+    f.append(n.data.slice(last,i)+pre);const a=document.createElement('a');a.className='tellink';a.href='tel:'+num.replace(/-/g,'');a.dir='ltr';a.textContent=num;f.append(a);if(post)f.append(post);last=i+m.length;return m;});
+    f.append(n.data.slice(last));n.replaceWith(f);});
+}
 function verifyHtml(){return `<div class="verify">${SITE.verifyContacts.map(v=>`<div class="vrow"><strong>${esc(v.name)}</strong><div class="vact">${v.phone?`<a class="vbtn" dir="ltr" href="tel:${esc(v.phone.tel)}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><bdi dir="ltr">${esc(v.phone.display)}</bdi></a>`:''}${v.url?`<a class="vbtn" href="${esc(v.url)}" target="_blank" rel="noopener noreferrer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>לאתר</a>`:''}</div></div>`).join('')}</div>`;}
 function viewMy(){
   const rights=RIGHTS.filter(visible), orgs=ORGS.filter(visible), tasks=TASKS.filter(visible);
@@ -372,16 +388,20 @@ function viewOrg(){
   <section><span class="label">למי</span>${esc(o.audience)}</section><section><span class="label">מה עושים שם</span>${esc(o.oneLiner)}</section><section><span class="label">איפה</span>${esc(o.location)}</section>
   <div class="contact">${c}</div><p class="asof" style="margin-top:16px">*המידע נכון ל-<span class="ltr">${o.asOf}</span> · <a href="${esc(o.sourceUrl)}" target="_blank" rel="noopener noreferrer">מקור: אתר העמותה</a></p></div>`;
 }
-function viewAccess(){const A=SITE.accessibility;
+function viewPrivacy(){const P=SITE.privacyPolicy;if(!P)return `<h1>העמוד עוד לא מעודכן</h1><p>כנראה שהקובץ data/site.js באתר הוא גרסה ישנה. צריך להעלות את הקובץ site.js המעודכן לתיקייה data במאגר ב-GitHub.</p>`;
+  return `<div class="pp"><h1>${esc(P.title)}</h1><p>${esc(P.intro)}</p>${P.sections.map(x=>`<section><h2>${esc(x.h)}</h2><p>${esc(x.p)}</p>${x.link?`<p><a href="${esc(x.link)}" target="_blank" rel="noopener noreferrer">${esc(x.linkText)}</a></p>`:''}</section>`).join('')}
+  <section><h2>שאלות?</h2><p>אפשר לכתוב לנו: <a class="maillink" dir="ltr" href="mailto:${esc(SITE.contactEmail)}">${esc(SITE.contactEmail)}</a></p></section>
+  <p class="small muted" style="margin-top:18px">${asof(P.updated)}</p></div>`;}
+function viewAccess(){const A=SITE.accessibility;if(!A)return `<h1>העמוד עוד לא מעודכן</h1><p>כנראה שהקובץ data/site.js באתר הוא גרסה ישנה. צריך להעלות את הקובץ site.js המעודכן לתיקייה data במאגר ב-GitHub.</p>`;
   return `<h1>${esc(A.title)}</h1><p>${esc(A.intro)}</p><h2>${esc(A.doneTitle)}</h2><ul class="acclist">${A.done.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
-  <h2>${esc(A.limitsTitle)}</h2><p>${esc(A.limits)}</p><h2>${esc(A.contactTitle)}</h2><p>${esc(A.contact)} <span class="ltr" style="font-weight:600">${esc(SITE.contactEmail)}</span></p>
+  <h2>${esc(A.limitsTitle)}</h2><p>${esc(A.limits)}</p><h2>${esc(A.contactTitle)}</h2><p>${esc(A.contact)} <a class="maillink" dir="ltr" href="mailto:${esc(SITE.contactEmail)}">${esc(SITE.contactEmail)}</a></p>
   <p class="small muted">${asof(A.updated)}</p>`;}
 function viewAbout(){
   const verify=verifyHtml();
   const src=SITE.sources.map(x=>`<div class="src"><strong>${esc(x.name)}</strong><span class="muted small">${esc(x.about)}</span>${x.url?`<a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">לאתר</a>`:''}</div>`).join('');
   return `<h1>מקורות המידע</h1><p>כל המידע באתר נבדק מול מקורות רשמיים ומול אתרי הארגונים, ונכון ל-<span class="ltr">${SITE.asOf}</span>. ליד כל זכות, ארגון ופעולה באתר יש קישור למקור שלו.</p>
   <div class="srcs">${src}</div>
-  <h2>מי אנחנו</h2><p>${esc(SITE.disclaimer.volunteerNote)}</p><div class="dedication" style="margin-top:12px"><span aria-hidden="true" style="display:block;width:48px;height:1px;background:var(--accent)"></span><p>${esc(SITE.dedication)}</p></div><h2>פרטיות</h2><p>${esc(SITE.disclaimer.privacyLong)}</p><h2>חשוב לדעת</h2><p>${esc(SITE.disclaimer.aboutPage)}</p><p>לעדכונים והצעות: <span class="ltr">${esc(SITE.contactEmail)}</span></p>
+  <h2>מי אנחנו</h2><p>${esc(SITE.disclaimer.volunteerNote)}</p><div class="dedication" style="margin-top:12px"><span aria-hidden="true" style="display:block;width:48px;height:1px;background:var(--accent)"></span><p>${esc(SITE.dedication)}</p></div><h2>פרטיות</h2><p>${esc(SITE.disclaimer.privacyLong)} <button class="linkbtn" data-go="privacy">למדיניות הפרטיות המלאה</button></p><h2>חשוב לדעת</h2><p>${esc(SITE.disclaimer.aboutPage)}</p><p>לעדכונים והצעות: <a class="maillink" dir="ltr" href="mailto:${esc(SITE.contactEmail)}">${esc(SITE.contactEmail)}</a></p>
   <h2>רוצה לוודא או לקבל עזרה אישית?</h2>${verify}`;
 }
 const HKEYS=['done','view','tab','cat','catSkipped','ages','kidsSkipped','count','id','back','stage'];
@@ -389,7 +409,7 @@ function stateHash(){const p=new URLSearchParams();HKEYS.forEach(k=>{const v=S[k
   const s=p.toString();return s?'#'+s:'#';}
 function readHash(){const p=new URLSearchParams(location.hash.slice(1));
   Object.assign(S,{done:false,view:'home',tab:'rights',cat:null,catSkipped:false,ages:[],kidsSkipped:true,count:0,id:null,back:'my',stage:null,menu:false});
-  if(p.get('view')&&['home','q1','q2','my','right','org','about','access'].includes(p.get('view')))S.view=p.get('view');
+  if(p.get('view')&&['home','q1','q2','my','right','org','about','access','privacy'].includes(p.get('view')))S.view=p.get('view');
   if(['rights','orgs','tasks'].includes(p.get('tab')))S.tab=p.get('tab');
   if(p.get('cat')&&SITE.categories.some(c=>c.id===p.get('cat')))S.cat=p.get('cat');
   S.catSkipped=p.get('catSkipped')==='true';S.done=p.get('done')==='true';
@@ -401,8 +421,9 @@ function readHash(){const p=new URLSearchParams(location.hash.slice(1));
 let PUSH=false;
 function render(){
   if(S.view==='my'&&!S.done)S.view='q1';
-  const v={home:viewHome,q1:viewQ1,q2:viewQ1,my:viewMy,right:viewRight,org:viewOrg,about:viewAbout,access:viewAccess}[S.view]();
-  document.getElementById('app').innerHTML='<button class="skip" data-act="skipmain">דילוג לתוכן</button>'+header()+'<main id="main" tabindex="-1">'+v+'</main>'+'<div class="helpline">רוצה לדבר עם מישהו? <strong>ער"ן <span class="ltr">1201</span></strong> · כל שעה</div>'+footer();
+  const v={home:viewHome,q1:viewQ1,q2:viewQ1,my:viewMy,right:viewRight,org:viewOrg,about:viewAbout,access:viewAccess,privacy:viewPrivacy}[S.view]();
+  document.getElementById('app').innerHTML='<button class="skip" data-act="skipmain">דילוג לתוכן</button>'+header()+'<main id="main" tabindex="-1">'+v+'</main>'+'<div class="helpline"><span>רוצה לדבר עם מישהו? ער"ן – עזרה ראשונה נפשית, כל שעה</span><a class="vbtn hlcall" href="tel:1201" aria-label="להתקשר לער&quot;ן, 1201"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>להתקשר ל-1201</span></a></div>'+footer();
+  telify(document.getElementById('main'));
   const h=stateHash();if(h!==(location.hash||'#')){try{history[PUSH?'pushState':'replaceState'](null,'',h)}catch(e){}}PUSH=false;
 }
 window.addEventListener('popstate',()=>{const was=S.view;readHash();render();const y=(S.view==='my'&&(was==='right'||was==='org'))?S.returnY:0;requestAnimationFrame(()=>window.scrollTo(0,y))});
