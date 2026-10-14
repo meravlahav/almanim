@@ -30,7 +30,7 @@ window.DATA_site = {
       "id": "illness",
       "key": "מחלה – אחר",
       "label": "מחלה אחרת",
-      "hint": "כולל מחלה ממושכת",
+      "hint": "כולל מחלות לב ומחלה ממושכת",
       "group": "natural"
     },
     {
@@ -41,38 +41,10 @@ window.DATA_site = {
       "group": "natural"
     },
     {
-      "id": "war",
-      "key": "מלחמה / שירות ביטחוני",
-      "label": "מלחמה או שירות ביטחוני",
-      "hint": "צה\"ל, משטרה וכוחות ביטחון",
-      "group": "external"
-    },
-    {
-      "id": "terror",
-      "key": "פעולת איבה",
-      "label": "פיגוע או פעולת איבה",
-      "hint": "",
-      "group": "external"
-    },
-    {
-      "id": "murder",
-      "key": "רצח",
-      "label": "רצח",
-      "hint": "",
-      "group": "external"
-    },
-    {
       "id": "road",
       "key": "תאונת דרכים",
       "label": "תאונת דרכים",
       "hint": "",
-      "group": "external"
-    },
-    {
-      "id": "work",
-      "key": "תאונת עבודה",
-      "label": "תאונת עבודה",
-      "hint": "כולל בדרך לעבודה",
       "group": "external"
     },
     {
@@ -83,11 +55,39 @@ window.DATA_site = {
       "group": "natural"
     },
     {
+      "id": "war",
+      "key": "מלחמה / שירות ביטחוני",
+      "label": "מלחמה או שירות ביטחוני",
+      "hint": "צה\"ל, משטרה וכוחות ביטחון",
+      "group": "external"
+    },
+    {
+      "id": "murder",
+      "key": "רצח",
+      "label": "רצח",
+      "hint": "",
+      "group": "external"
+    },
+    {
       "id": "accident",
       "key": "תאונה אחרת (טביעה / נפילה ועוד)",
       "label": "תאונה אחרת",
       "hint": "למשל טביעה או נפילה",
       "group": "natural"
+    },
+    {
+      "id": "work",
+      "key": "תאונת עבודה",
+      "label": "תאונת עבודה",
+      "hint": "כולל בדרך לעבודה",
+      "group": "external"
+    },
+    {
+      "id": "terror",
+      "key": "פעולת איבה",
+      "label": "פיגוע או פעולת איבה",
+      "hint": "",
+      "group": "external"
     }
   ],
   "stages": [
