@@ -105,7 +105,7 @@ button{font-family:inherit}
 .verify{display:grid;gap:8px}
 .verify .vrow{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 16px;display:grid;gap:8px;align-content:start}
 .vact{display:flex;flex-wrap:wrap;gap:8px 10px}
-.maillink{color:var(--ink);font-weight:700;text-decoration:underline;text-underline-offset:3px;unicode-bidi:isolate;word-break:break-all}
+.maillink{color:var(--ink);font-weight:700;text-decoration:underline;text-underline-offset:3px;unicode-bidi:isolate;display:inline-block;max-width:100%;overflow-wrap:anywhere}
 .tellink{color:var(--ink);font-weight:700;text-decoration:underline;text-underline-offset:3px;unicode-bidi:isolate;white-space:nowrap}
 .vbtn{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:4px 12px;border:1px solid var(--border);border-radius:999px;background:var(--bg);color:var(--ink);text-decoration:none;font-weight:700;font-size:15px}
 .vbtn:hover{border-color:var(--primary);background:var(--primary-soft)}
@@ -178,6 +178,10 @@ a.btn{display:inline-flex!important;align-items:center;justify-content:center;te
 .orgsec:first-of-type{border-top:0;padding-top:0;margin-top:20px}
 .star{color:var(--accent);font-weight:700;margin-inline-start:2px}
 .amountnote{font-size:15px;color:var(--muted);margin:10px 0 0;line-height:1.5}
+.byline{font-family:var(--body);font-size:15px;color:var(--muted);margin-top:10px!important;max-width:40ch}
+.dedication.feature{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px 18px;margin:8px auto 8px;max-width:none}
+.aboutme h2{margin-top:28px}
+.sig{font-weight:700;color:var(--ink)}
 .srcbox{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--border);border-inline-start:4px solid var(--primary);border-radius:12px;padding:14px 16px;margin:20px 0 10px}
 .srcbox>div{display:grid;gap:2px;justify-items:start}
 .srcbox strong{font-size:17px;color:var(--ink)}
@@ -213,7 +217,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
 </head>
 <body>
 <div id="app" dir="rtl" lang="he"></div>
-<script src="data/site.js?v=99621608"></script>
+<script src="data/site.js?v=47ceb42a"></script>
 <script src="data/rights.js?v=4f7928ca"></script>
 <script src="data/tasks.js?v=c5ff9ea9"></script>
 <script src="data/organizations.js?v=d14319b1"></script>
@@ -252,7 +256,7 @@ function go(v,extra){Object.assign(S,{view:v,menu:false},extra||{});PUSH=true;re
 function header(){
   const cur=S.view==='my'?S.tab:S.view;
   const item=(id,label,icon,attr)=>`<button ${attr} ${cur===id?'aria-current="page"':''}>${icon||''}<span>${label}</span></button>`;
-  const items=item('home','דף הבית',leaf(20),'data-go="home"')+item('rights','מה הזכויות שלי',IC.rights,'data-tabgo="rights"')+item('orgs','ליווי ותמיכה',IC.orgs,'data-tabgo="orgs"')+item('tasks','מה לעשות ומתי',IC.tasks,'data-tabgo="tasks"')+item('about','מקורות המידע','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>','data-go="about"')+item('privacy','מדיניות פרטיות','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>','data-go="privacy" class="m-only"')+item('access','הצהרת נגישות','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="4.5" r="1.8"/><path d="M5 8.5l7 1.5 7-1.5M12 10v5M12 15l-3.5 6M12 15l3.5 6"/></svg>','data-go="access" class="m-only"');
+  const items=item('home','דף הבית',leaf(20),'data-go="home"')+item('rights','מה הזכויות שלי',IC.rights,'data-tabgo="rights"')+item('orgs','ליווי ותמיכה',IC.orgs,'data-tabgo="orgs"')+item('tasks','מה לעשות ומתי',IC.tasks,'data-tabgo="tasks"')+item('about','על האתר','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>','data-go="about"')+item('privacy','מדיניות פרטיות','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>','data-go="privacy" class="m-only"')+item('access','הצהרת נגישות','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="4.5" r="1.8"/><path d="M5 8.5l7 1.5 7-1.5M12 10v5M12 15l-3.5 6M12 15l3.5 6"/></svg>','data-go="access" class="m-only"');
   return `<header class="top"><button class="brand" data-go="home"><svg viewBox="18 28 124 112" width="34" height="31" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round">
 <path d="M22 136C22 100 36 76 60 72C80 74 92 96 94 136Z" fill="var(--primary-soft)" stroke="var(--primary)" stroke-width="2.5"/>
 <path d="M66 136C68 102 82 80 104 78C126 80 138 102 138 136Z" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
@@ -266,7 +270,7 @@ function header(){
   <nav class="mainnav" id="mainmenu" aria-label="תפריט ראשי" ${S.menu?'data-open':''}>${items}</nav></header>`;
 }
 function footer(){
-  return `<footer class="site"><p>${asof(SITE.disclaimer.footer)}</p><p>לעדכונים והצעות: <a class="maillink" dir="ltr" href="mailto:${esc(SITE.contactEmail)}">${esc(SITE.contactEmail)}</a> · <button class="linkbtn" data-go="about">מקורות המידע</button> · <button class="linkbtn" data-go="privacy">מדיניות פרטיות</button> · <button class="linkbtn" data-go="access">הצהרת נגישות</button></p></footer>`;
+  return `<footer class="site"><p>${asof(SITE.disclaimer.footer)}</p><p>נכתב בהתנדבות על ידי מרב להב · לעדכונים והצעות: <a class="maillink" dir="ltr" href="mailto:${esc(SITE.contactEmail)}">${esc(SITE.contactEmail)}</a> · <button class="linkbtn" data-go="about">על האתר</button> · <button class="linkbtn" data-go="privacy">מדיניות פרטיות</button> · <button class="linkbtn" data-go="access">הצהרת נגישות</button></p></footer>`;
 }
 function viewHome(){
   return `<div class="home"><svg viewBox="0 0 160 140" width="150" height="131" class="embrace" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -282,7 +286,7 @@ function viewHome(){
   <div class="options">${TABS.map(([id,ti,l])=>`<button class="opt" data-start="${id}"><span class="ic">${IC[id]}</span><b>${ti}</b><span class="l">${l}</span></button>`).join('')}</div>
   ${S.done&&S.cat?`<p class="notice" style="background:var(--primary-soft);margin:0 0 4px;justify-content:center;font-size:17px;flex-wrap:wrap"><span><strong>המידע מותאם לך לפי:</strong> ${esc(summaryText())}</span> <button class="linkbtn" data-act="change">לשנות את התשובה</button></p>`:`<p class="notice" style="background:var(--primary-soft);margin:0 0 4px;justify-content:center;font-size:17px"><span><strong>מותאם אישית:</strong> הצגת מידע רלוונטי עבורך לפי סיבת הפטירה של בן או בת הזוג. ניתן גם לקבל את כל המידע בלי סינון.</span></p>`}
   <div class="privacy"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" style="flex:none;color:var(--primary)"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><p>${SITE.disclaimer.privacyShort.split('\n').map((x,i)=>i?`<span>${esc(x)}</span>`:`<strong>${esc(x)}</strong>`).join('')}</p></div>
-  <div class="dedication"><span aria-hidden="true" style="display:block;width:48px;height:1px;background:var(--accent)"></span><p>${esc(SITE.dedication)}</p></div><p class="small muted" style="margin-top:24px">המידע באתר נכון ל-<span class="ltr">${SITE.asOf}</span> ואינו מחליף בדיקה מול הגוף הרשמי. הוא אינו ייעוץ משפטי.</p></div>`;
+  <div class="dedication"><span aria-hidden="true" style="display:block;width:48px;height:1px;background:var(--accent)"></span><p>${esc(SITE.dedication)}</p>${SITE.aboutMe?`<p class="byline">${esc(SITE.aboutMe.homeLine)}<br><button class="linkbtn" data-go="about">${esc(SITE.aboutMe.homeLink)}</button></p>`:''}</div><p class="small muted" style="margin-top:24px">המידע באתר נכון ל-<span class="ltr">${SITE.asOf}</span> ואינו מחליף בדיקה מול הגוף הרשמי. הוא אינו ייעוץ משפטי.</p></div>`;
 }
 function viewQ1(){
   const card=c=>`<button class="choice" role="radio" aria-checked="${S.cat===c.id}" data-cat="${c.id}">${esc(c.label)}${c.hint?`<span class="hint">${esc(c.hint)}</span>`:''}</button>`;
@@ -410,9 +414,11 @@ function viewAccess(){const A=SITE.accessibility;if(!A)return `<h1>העמוד ע
 function viewAbout(){
   const verify=verifyHtml();
   const src=SITE.sources.map(x=>`<div class="src"><strong>${esc(x.name)}</strong><span class="muted small">${esc(x.about)}</span>${x.url?`<a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">לאתר</a>`:''}</div>`).join('');
-  return `<h1>מקורות המידע</h1><p>כל המידע באתר נבדק מול מקורות רשמיים ומול אתרי הארגונים, ונכון ל-<span class="ltr">${SITE.asOf}</span>. ליד כל זכות, ארגון ופעולה באתר יש קישור למקור שלו.</p>
+  const M=SITE.aboutMe;
+  const me=M?`<section class="aboutme"><div class="dedication feature"><span aria-hidden="true" style="display:block;width:48px;height:1px;background:var(--accent)"></span><p>${esc(SITE.dedication)}</p></div><h2>${esc(M.title)}</h2>${M.paragraphs.map(x=>`<p>${esc(x)}</p>`).join('')}<p>${esc(M.contact)} <a class="maillink" dir="ltr" href="mailto:${esc(SITE.contactEmail)}">${esc(SITE.contactEmail)}</a></p><p class="sig">${esc(M.signature)}</p></section>`:'';
+  return `<h1>על האתר</h1>${me}<h2>מקורות המידע</h2><p>כל המידע באתר נבדק מול מקורות רשמיים ומול אתרי הארגונים, ונכון ל-<span class="ltr">${SITE.asOf}</span>. ליד כל זכות, ארגון ופעולה באתר יש קישור למקור שלו.</p>
   <div class="srcs">${src}</div>
-  <h2>מי אנחנו</h2><p>${esc(SITE.disclaimer.volunteerNote)}</p><div class="dedication" style="margin-top:12px"><span aria-hidden="true" style="display:block;width:48px;height:1px;background:var(--accent)"></span><p>${esc(SITE.dedication)}</p></div><h2>פרטיות</h2><p>${esc(SITE.disclaimer.privacyLong)} <button class="linkbtn" data-go="privacy">למדיניות הפרטיות המלאה</button></p><h2>חשוב לדעת</h2><p>${esc(SITE.disclaimer.aboutPage)}</p><p>לעדכונים והצעות: <a class="maillink" dir="ltr" href="mailto:${esc(SITE.contactEmail)}">${esc(SITE.contactEmail)}</a></p>
+  ${M?'':`<h2>מי אנחנו</h2><p>${esc(SITE.disclaimer.volunteerNote)}</p><div class="dedication" style="margin-top:12px"><span aria-hidden="true" style="display:block;width:48px;height:1px;background:var(--accent)"></span><p>${esc(SITE.dedication)}</p></div>`}<h2>פרטיות</h2><p>${esc(SITE.disclaimer.privacyLong)} <button class="linkbtn" data-go="privacy">למדיניות הפרטיות המלאה</button></p><h2>חשוב לדעת</h2><p>${esc(SITE.disclaimer.aboutPage)}</p><p>לעדכונים והצעות: <a class="maillink" dir="ltr" href="mailto:${esc(SITE.contactEmail)}">${esc(SITE.contactEmail)}</a></p>
   <h2>רוצה לוודא או לקבל עזרה אישית?</h2>${verify}`;
 }
 const HKEYS=['done','view','tab','cat','catSkipped','ages','kidsSkipped','count','id','back','stage'];
