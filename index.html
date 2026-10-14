@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="מקום אחד שעושה סדר לאלמנות ולאלמנים בישראל: זכויות, קצבאות ומענקים, ארגונים ועמותות, ומה לעשות ומתי – מותאם אישית, בלי הרשמה.">
+<meta name="description" content="מקום אחד שעושה סדר לאלמנות ולאלמנים בישראל: זכויות, קצבאות ומענקים, ליווי ותמיכה של עמותות, ומה לעשות ומתי – מותאם אישית, בלי הרשמה.">
 <meta name="referrer" content="no-referrer">
 <meta name="theme-color" content="#FAF6F0">
 <meta name="color-scheme" content="only light">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="he_IL">
 <meta property="og:title" content="מידע לאלמנות ולאלמנים">
-<meta property="og:description" content="מקום אחד שעושה סדר לאלמנות ולאלמנים בישראל: זכויות, קצבאות ומענקים, ארגונים ועמותות, ומה לעשות ומתי – מותאם אישית, בלי הרשמה.">
+<meta property="og:description" content="מקום אחד שעושה סדר לאלמנות ולאלמנים בישראל: זכויות, קצבאות ומענקים, ליווי ותמיכה של עמותות, ומה לעשות ומתי – מותאם אישית, בלי הרשמה.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <title>מידע לאלמנות ולאלמנים</title>
 <style>
@@ -213,9 +213,9 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
 </head>
 <body>
 <div id="app" dir="rtl" lang="he"></div>
-<script src="data/site.js?v=ae3bdae8"></script>
+<script src="data/site.js?v=99621608"></script>
 <script src="data/rights.js?v=4f7928ca"></script>
-<script src="data/tasks.js?v=89c108ad"></script>
+<script src="data/tasks.js?v=c5ff9ea9"></script>
 <script src="data/organizations.js?v=d14319b1"></script>
 <script>
 if(!window.DATA_site||!window.DATA_rights||!window.DATA_tasks||!window.DATA_organizations){
@@ -228,7 +228,7 @@ const SITE=window.DATA_site, RIGHTS=window.DATA_rights, TASKS=window.DATA_tasks,
 const IC={rights:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 14l2 2 4-4"/></svg>',
 orgs:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="16.5" cy="9" r="2.5"/><path d="M3 20c0-3 2.5-5 5-5s5 2 5 5"/><path d="M13.5 15.5c.9-.6 1.9-1 3-1 2.3 0 4.5 1.8 4.5 4.5"/></svg>',
 tasks:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M3.5 6l1.2 1.2L6.8 5M3.5 12l1.2 1.2 2.1-2.2M3.5 18l1.2 1.2 2.1-2.2"/></svg>'};
-const TABS=[['rights','מה הזכויות שלי','זכויות, קצבאות ומענקים'],['orgs','ארגונים ועמותות','ליווי, תמיכה ופעילויות לילדים'],['tasks','מה לעשות ומתי','צעד אחר צעד, מהיום הראשון']];
+const TABS=[['rights','מה הזכויות שלי','זכויות, קצבאות ומענקים'],['orgs','ליווי ותמיכה','עמותות שמלוות אותך ואת הילדים'],['tasks','מה לעשות ומתי','צעד אחר צעד, מהיום הראשון']];
 const S={done:false,open:{},returnY:0,tab:'rights',view:'home',cat:null,catSkipped:false,ages:[],kidsSkipped:true,count:0,stage:null,showAllTasks:false,showAllRights:false,showAllOrgs:false,id:null,back:'my'};
 const LEAF='<svg viewBox="0 0 32 32" width="__W__" height="__W__" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true" style="color:var(--primary)"><path d="M16 28V12"/><path d="M16 18c-5 0-8-3-8-8 5 0 8 3 8 8z"/><path d="M16 14c4 0 7-2.5 7-7-4 0-7 2.5-7 7z"/></svg>';
 const leaf=w=>LEAF.replace(/__W__/g,w);
@@ -252,7 +252,7 @@ function go(v,extra){Object.assign(S,{view:v,menu:false},extra||{});PUSH=true;re
 function header(){
   const cur=S.view==='my'?S.tab:S.view;
   const item=(id,label,icon,attr)=>`<button ${attr} ${cur===id?'aria-current="page"':''}>${icon||''}<span>${label}</span></button>`;
-  const items=item('home','דף הבית',leaf(20),'data-go="home"')+item('rights','מה הזכויות שלי',IC.rights,'data-tabgo="rights"')+item('orgs','ארגונים ועמותות',IC.orgs,'data-tabgo="orgs"')+item('tasks','מה לעשות ומתי',IC.tasks,'data-tabgo="tasks"')+item('about','מקורות המידע','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>','data-go="about"')+item('privacy','מדיניות פרטיות','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>','data-go="privacy" class="m-only"')+item('access','הצהרת נגישות','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="4.5" r="1.8"/><path d="M5 8.5l7 1.5 7-1.5M12 10v5M12 15l-3.5 6M12 15l3.5 6"/></svg>','data-go="access" class="m-only"');
+  const items=item('home','דף הבית',leaf(20),'data-go="home"')+item('rights','מה הזכויות שלי',IC.rights,'data-tabgo="rights"')+item('orgs','ליווי ותמיכה',IC.orgs,'data-tabgo="orgs"')+item('tasks','מה לעשות ומתי',IC.tasks,'data-tabgo="tasks"')+item('about','מקורות המידע','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>','data-go="about"')+item('privacy','מדיניות פרטיות','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>','data-go="privacy" class="m-only"')+item('access','הצהרת נגישות','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="4.5" r="1.8"/><path d="M5 8.5l7 1.5 7-1.5M12 10v5M12 15l-3.5 6M12 15l3.5 6"/></svg>','data-go="access" class="m-only"');
   return `<header class="top"><button class="brand" data-go="home"><svg viewBox="18 28 124 112" width="34" height="31" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round">
 <path d="M22 136C22 100 36 76 60 72C80 74 92 96 94 136Z" fill="var(--primary-soft)" stroke="var(--primary)" stroke-width="2.5"/>
 <path d="M66 136C68 102 82 80 104 78C126 80 138 102 138 136Z" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
@@ -286,8 +286,7 @@ function viewHome(){
 }
 function viewQ1(){
   const card=c=>`<button class="choice" role="radio" aria-checked="${S.cat===c.id}" data-cat="${c.id}">${esc(c.label)}${c.hint?`<span class="hint">${esc(c.hint)}</span>`:''}</button>`;
-  const R=SITE.categories.filter(c=>c.group===SITE.categoryGroups[0].id),L=SITE.categories.filter(c=>c.group===SITE.categoryGroups[1].id);
-  let groups='';for(let i=0;i<Math.max(R.length,L.length);i++){groups+=(R[i]?card(R[i]):'<span></span>')+(L[i]?card(L[i]):'<span></span>');}
+  const groups=SITE.categories.map(card).join('');
   return `<div class="progress">שאלה אחת · <span style="white-space:nowrap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" style="flex:none;color:var(--primary)"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg> התשובה לא נשמרת</span></div><h1>מה הייתה סיבת הפטירה של בן או בת הזוג?</h1><p class="muted">לכל סיבה יש זכויות, ארגונים ועמותות אחרים – כך נוכל להציג לך רק את מה שרלוונטי <strong>לך</strong>.</p><div class="catcols" role="radiogroup" aria-label="סיבת הפטירה">${groups}</div>
   <div class="row"><button class="btn ghost" data-act="skip1">לדלג ולראות את כל המידע, בלי סינון</button></div>`;
 }
@@ -369,7 +368,7 @@ function viewMy(){
     <div class="notice" style="background:var(--primary-soft);margin-top:0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" style="flex:none;color:var(--primary);margin-top:3px"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>${esc(SITE.disclaimer.tasksLateNotice)}</span></div>
     <div class="tabs" role="tablist" style="margin-top:16px">${stages.map(s=>`<button role="tab" aria-selected="${s.id===S.stage}" data-stage="${s.id}">${esc(s.label)}</button>`).join('')}</div>
     <div class="tasks">${st.map(taskHtml).join('')}</div>`;}
-  return `<h1 class="sr">${({rights:'מה הזכויות שלי',orgs:'ארגונים ועמותות',tasks:'מה לעשות ומתי'})[S.tab]}</h1>`+summaryBlock()+tabs+body+`<h2>רוצה לוודא או לקבל עזרה אישית?</h2>${verify}`;
+  return `<h1 class="sr">${({rights:'מה הזכויות שלי',orgs:'ליווי ותמיכה',tasks:'מה לעשות ומתי'})[S.tab]}</h1>`+summaryBlock()+tabs+body+`<h2>רוצה לוודא או לקבל עזרה אישית?</h2>${verify}`;
 }
 const SRCICON='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/><path d="M8 7h8M8 11h6"/></svg>';
 function srcName(u){const h=(u.match(/^https?:\/\/([^\/]+)/)||[,''])[1];
