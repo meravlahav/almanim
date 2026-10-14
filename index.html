@@ -36,12 +36,12 @@ nav.menu{display:flex;gap:4px;flex-wrap:wrap}
 nav.menu button{font:inherit;font-size:15px;background:none;border:0;color:var(--muted);padding:6px 8px;border-radius:8px;cursor:pointer}
 nav.menu button:hover{background:var(--primary-soft);color:var(--ink)}
 h1{font-family:var(--display);font-weight:700;font-size:clamp(28px,7vw,36px);line-height:1.25;margin:0 0 12px;text-wrap:balance;color:var(--ink)}
-h2{font-family:var(--display);font-weight:700;font-size:24px;margin:36px 0 14px;color:var(--text)}
+h2{font-family:var(--display);font-weight:700;font-size:22px;margin:36px 0 14px;color:var(--text)}
 p{margin:0 0 12px}
 .muted{color:var(--muted)}
-.small{font-size:14px}
+.small{font-size:15px}
 button{font-family:inherit}
-.btn{box-sizing:border-box;font:inherit;font-weight:600;border:0;border-radius:12px;padding:12px 22px;min-height:48px;cursor:pointer;background:var(--primary);color:var(--on-primary)}
+.btn{box-sizing:border-box;font:inherit;font-weight:700;border:0;border-radius:12px;padding:12px 22px;min-height:48px;cursor:pointer;background:var(--primary);color:var(--on-primary)}
 .btn.sm{min-height:40px;padding:8px 20px;border-radius:999px;font-size:15px;width:fit-content}
 .btn:disabled{opacity:.45;cursor:default}
 .btn.ghost{background:none;color:var(--ink);text-decoration:underline;text-underline-offset:4px;padding-inline:8px}
@@ -52,12 +52,12 @@ button{font-family:inherit}
 .embrace{display:block;margin:0 auto 6px}
 .welcome{max-width:36ch;margin:0 auto 14px;color:var(--text);font-size:18px}
 .home .leaf{margin-inline:auto;display:block}
-.home p.lead{font-size:19px;max-width:30ch;margin:0 auto 24px}
+.home p.lead{font-size:18px;max-width:30ch;margin:0 auto 24px}
 .progress{color:var(--muted);font-size:15px;margin-bottom:6px}
 .choices{display:grid;gap:10px;margin-block:18px 24px}
 .choice{display:block;width:100%;text-align:start;background:var(--surface);border:2px solid var(--border);border-radius:14px;padding:14px 16px;font:inherit;color:var(--text);cursor:pointer}
 .choice[aria-checked="true"]{background:var(--primary-soft);border-color:var(--primary)}
-.choice .hint{display:block;color:var(--muted);font-size:14px}
+.choice .hint{display:block;color:var(--muted);font-size:15px}
 .stepper{display:flex;align-items:center;gap:16px;margin-block:12px 18px}
 .stepper button{width:48px;height:48px;border-radius:50%;border:2px solid var(--primary);background:var(--surface);color:var(--ink);font-size:24px;cursor:pointer;line-height:1}
 .stepper output{font-size:28px;font-weight:700;min-width:2ch;text-align:center;font-variant-numeric:tabular-nums}
@@ -76,16 +76,16 @@ button{font-family:inherit}
 .task .cond{display:block;font-size:13px;color:var(--muted)}
 .task .chev{color:var(--muted);transition:transform .2s}
 .task[open] .chev{transform:rotate(180deg)}
-.task .more{padding:0 14px 14px;font-size:16px;display:grid;gap:6px}
+.task .more{padding:0 14px 14px;font-size:17px;display:grid;gap:6px}
 .label{font-size:13px;color:var(--muted);display:block}
 .cards{display:grid;gap:12px}
 @media (min-width:1024px){.cards.orgs{grid-template-columns:1fr 1fr}}
 .card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:16px;display:grid;gap:8px;min-width:0}
-.card h3{margin:0;font-size:19px;font-weight:700;line-height:1.35}
+.card h3{margin:0;font-size:18px;font-weight:700;line-height:1.35}
 .amount{color:var(--ink);font-weight:600}
 .asof{font-size:13px;color:var(--muted)}
 .info{background:var(--sand);border-radius:16px;padding:16px;margin-top:14px}
-.info h3{margin:0 0 8px;font-family:var(--display);font-size:20px}
+.info h3{margin:0 0 8px;font-size:18px}
 .info ul{margin:0;padding-inline-start:20px;display:grid;gap:6px}
 .orgtop{display:flex;gap:12px;align-items:center}
 .tile{width:88px;height:64px;flex:none;border:1px solid var(--border);border-radius:12px;background:var(--primary-soft);display:grid;place-items:center}
@@ -107,11 +107,11 @@ button{font-family:inherit}
 .vact{display:flex;flex-wrap:wrap;gap:8px 10px}
 .maillink{color:var(--ink);font-weight:700;text-decoration:underline;text-underline-offset:3px;unicode-bidi:isolate;word-break:break-all}
 .tellink{color:var(--ink);font-weight:700;text-decoration:underline;text-underline-offset:3px;unicode-bidi:isolate;white-space:nowrap}
-.vbtn{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:4px 12px;border:1px solid var(--border);border-radius:999px;background:var(--bg);color:var(--ink);text-decoration:none;font-weight:600;font-size:15px}
+.vbtn{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:4px 12px;border:1px solid var(--border);border-radius:999px;background:var(--bg);color:var(--ink);text-decoration:none;font-weight:700;font-size:15px}
 .vbtn:hover{border-color:var(--primary);background:var(--primary-soft)}
 .vbtn svg{color:var(--primary);flex:none}
 @media (min-width:700px){.verify{grid-template-columns:1fr 1fr}}
-footer.site{margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:14px;color:var(--muted)}
+footer.site{margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:15px;color:var(--muted)}
 .helpline{background:var(--sand);border:1px solid var(--border);border-radius:12px;padding:12px 16px;margin-top:32px;text-align:center;font-size:15px}
 .helpline strong{color:var(--ink)}
 a{color:var(--ink)}
@@ -121,7 +121,7 @@ a{color:var(--ink)}
 .dedication{margin:28px auto 0;max-width:34ch;text-align:center;font-family:var(--display);font-size:18px;line-height:1.6;color:var(--ink);display:grid;justify-items:center;gap:6px}
 .dedication p{margin:0}
 header.top{position:relative;flex-wrap:wrap}
-.menubtn{display:inline-flex;align-items:center;gap:6px;font:inherit;font-weight:600;font-size:16px;color:var(--ink);background:var(--primary-soft);border:0;border-radius:10px;padding:8px 14px;min-height:44px;cursor:pointer}
+.menubtn{display:inline-flex;align-items:center;gap:6px;font:inherit;font-weight:700;font-size:17px;color:var(--ink);background:var(--primary-soft);border:0;border-radius:10px;padding:8px 14px;min-height:44px;cursor:pointer}
 .mainnav{display:none;width:100%;flex-direction:column;gap:4px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:8px;margin-top:10px}
 .mainnav[data-open]{display:flex}
 .mainnav button{display:flex;align-items:center;gap:12px;font:inherit;font-size:17px;color:var(--text);background:none;border:0;border-radius:10px;padding:12px;min-height:48px;cursor:pointer;text-align:start}
@@ -131,7 +131,9 @@ header.top{position:relative;flex-wrap:wrap}
 @media (min-width:900px){
  .menubtn{display:none}
  .mainnav{display:flex;flex-direction:row;width:auto;background:none;border:0;padding:0;margin:0;gap:2px}
- .mainnav button{font-size:15px;padding:8px 8px;min-height:40px;gap:5px;white-space:nowrap}
+ .mainnav button{font-size:15px;padding:8px 6px;min-height:40px;gap:5px;white-space:nowrap}
+ .brand .bt{white-space:nowrap}
+ .brand{flex:none}
  header.top{flex-wrap:nowrap}
  .mainnav{gap:0}
  .mainnav button svg{width:18px;height:18px}
@@ -143,9 +145,9 @@ header.top{position:relative;flex-wrap:wrap}
 .opt:hover{border-color:var(--primary);background:var(--primary-soft)}
 .opt:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
 .opt .ic{flex:none;width:44px;height:44px;border-radius:50%;background:var(--primary-soft);display:grid;place-items:center;color:var(--primary)}
-.opt b{display:block;font-family:var(--display);font-size:18px;font-weight:700;color:var(--ink);line-height:1.2;text-wrap:balance}
+.opt b{display:block;font-size:18px;font-weight:700;color:var(--ink);line-height:1.2;text-wrap:balance}
 .opt span.l{display:block;color:var(--muted);font-size:13px;line-height:1.4;margin-top:2px;text-wrap:balance}
-@media (min-width:600px){.options{gap:14px}.opt{padding:20px 14px 16px;gap:8px}.opt .ic{width:52px;height:52px}.opt b{font-size:21px}.opt span.l{font-size:15px}}
+@media (min-width:600px){.options{gap:14px}.opt{padding:20px 14px 16px;gap:8px}.opt .ic{width:52px;height:52px}.opt b{font-size:20px}.opt span.l{font-size:15px}}
 .bigtabs{background:var(--bg);display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding-block:10px;margin-top:12px}
 .bigtabs button{font:inherit;font-weight:700;font-size:15px;line-height:1.25;min-height:64px;border-radius:12px;border:1px solid var(--border);background:var(--surface);color:var(--ink);cursor:pointer;padding:6px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
 .bigtabs button .n{font-weight:400;font-size:13px;color:var(--muted)}
@@ -157,7 +159,7 @@ a.btn{display:inline-flex!important;align-items:center;justify-content:center;te
 
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 .flags{display:flex;flex-wrap:wrap;gap:6px;margin:-2px 0 2px}
-.flag{display:inline-block;font-size:13px;font-weight:600;line-height:1.3;padding:3px 10px;border-radius:999px;border:1px solid transparent}
+.flag{display:inline-block;font-size:13px;font-weight:700;line-height:1.3;padding:3px 10px;border-radius:999px;border:1px solid transparent}
 .fl-income{background:var(--accent-soft);color:var(--ink);border-color:var(--accent)}
 .fl-local{background:var(--primary-soft);color:var(--ink);border-color:var(--primary)}
 .fl-work{background:var(--sand);color:var(--ink);border-color:var(--border)}
@@ -167,15 +169,20 @@ a.btn{display:inline-flex!important;align-items:center;justify-content:center;te
 .catcols{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:12px;margin-top:8px}
 .catcols .choice{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:76px;padding:12px 12px;line-height:1.3;text-wrap:balance}
 .catcols .choice .hint{margin-top:4px;line-height:1.35;text-wrap:balance}
-.cgh{font-size:16px;margin:0 0 10px;color:var(--ink);line-height:1.35}
+.cgh{font-size:17px;margin:0 0 10px;color:var(--ink);line-height:1.35}
 @media (max-width:420px){.catcols{gap:10px}.catcols .choice{font-size:16px;padding:10px 8px;min-height:72px}.catcols .hint{font-size:13px}}
 .fl-kids{background:#FFFFFF;color:var(--ink);border-color:var(--primary);border-style:dashed}
 .kidsh{margin-top:36px;padding-top:18px;border-top:1px solid var(--border)}
 .jumps{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 6px}
-.jump{background:var(--surface);border:1px solid var(--primary);color:var(--ink);border-radius:999px;padding:8px 14px;font:inherit;font-size:15px;font-weight:600;cursor:pointer}
+.jump{background:var(--surface);border:1px solid var(--primary);color:var(--ink);border-radius:999px;padding:8px 14px;font:inherit;font-size:15px;font-weight:700;cursor:pointer}
 .orgsec:first-of-type{border-top:0;padding-top:0;margin-top:20px}
 .star{color:var(--accent);font-weight:700;margin-inline-start:2px}
-.amountnote{font-size:14px;color:var(--muted);margin:10px 0 0;line-height:1.5}
+.amountnote{font-size:15px;color:var(--muted);margin:10px 0 0;line-height:1.5}
+.srcbox{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--border);border-inline-start:4px solid var(--primary);border-radius:12px;padding:14px 16px;margin:20px 0 10px}
+.srcbox>div{display:grid;gap:2px;justify-items:start}
+.srcbox strong{font-size:17px;color:var(--ink)}
+.srcbox a{color:var(--ink);font-weight:700;margin-top:4px}
+.srcico{color:var(--primary);flex:none;margin-top:2px}
 .srcs{display:grid;gap:10px;margin:16px 0 8px}
 .src{display:grid;gap:2px;justify-items:start;align-content:start;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 16px}
 .src a{margin-top:4px}
@@ -183,14 +190,14 @@ a.btn{display:inline-flex!important;align-items:center;justify-content:center;te
 .privacy{display:flex;gap:10px;align-items:flex-start;max-width:640px;margin:14px auto 0;text-align:start;color:var(--muted);font-size:15px;line-height:1.5}
 .privacy svg{margin-top:2px}
 .privacy p{margin:0;display:grid;gap:2px}
-.privacy strong{color:var(--ink);font-weight:600}
+.privacy strong{color:var(--ink);font-weight:700}
 .home .notice{max-width:640px;box-sizing:border-box;margin-inline:auto!important}
 .row:has(.btn.sm){align-items:center}
 .contact a.btn,.contact a.btn:visited{color:var(--on-primary)}
 .tabs{gap:6px}
-.tabs button{padding:6px 12px;font-size:14px}
+.tabs button{padding:6px 12px;font-size:15px}
 .sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
-.skip{position:absolute;inset-inline-start:12px;top:-60px;z-index:10;background:var(--primary);color:var(--on-primary);border:0;border-radius:10px;padding:10px 16px;font:inherit;font-weight:600}
+.skip{position:absolute;inset-inline-start:12px;top:-60px;z-index:10;background:var(--primary);color:var(--on-primary);border:0;border-radius:10px;padding:10px 16px;font:inherit;font-weight:700}
 .skip:focus{top:12px}
 main:focus{outline:none}
 a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
@@ -221,7 +228,7 @@ const SITE=window.DATA_site, RIGHTS=window.DATA_rights, TASKS=window.DATA_tasks,
 const IC={rights:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 14l2 2 4-4"/></svg>',
 orgs:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="16.5" cy="9" r="2.5"/><path d="M3 20c0-3 2.5-5 5-5s5 2 5 5"/><path d="M13.5 15.5c.9-.6 1.9-1 3-1 2.3 0 4.5 1.8 4.5 4.5"/></svg>',
 tasks:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M3.5 6l1.2 1.2L6.8 5M3.5 12l1.2 1.2 2.1-2.2M3.5 18l1.2 1.2 2.1-2.2"/></svg>'};
-const TABS=[['rights','מה מגיע לי','זכויות, קצבאות ומענקים'],['orgs','ארגונים ועמותות','ליווי, תמיכה ופעילויות לילדים'],['tasks','מה לעשות ומתי','צעד אחר צעד, מהיום הראשון']];
+const TABS=[['rights','מה הזכויות שלי','זכויות, קצבאות ומענקים'],['orgs','ארגונים ועמותות','ליווי, תמיכה ופעילויות לילדים'],['tasks','מה לעשות ומתי','צעד אחר צעד, מהיום הראשון']];
 const S={done:false,open:{},returnY:0,tab:'rights',view:'home',cat:null,catSkipped:false,ages:[],kidsSkipped:true,count:0,stage:null,showAllTasks:false,showAllRights:false,showAllOrgs:false,id:null,back:'my'};
 const LEAF='<svg viewBox="0 0 32 32" width="__W__" height="__W__" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true" style="color:var(--primary)"><path d="M16 28V12"/><path d="M16 18c-5 0-8-3-8-8 5 0 8 3 8 8z"/><path d="M16 14c4 0 7-2.5 7-7-4 0-7 2.5-7 7z"/></svg>';
 const leaf=w=>LEAF.replace(/__W__/g,w);
@@ -245,7 +252,7 @@ function go(v,extra){Object.assign(S,{view:v,menu:false},extra||{});PUSH=true;re
 function header(){
   const cur=S.view==='my'?S.tab:S.view;
   const item=(id,label,icon,attr)=>`<button ${attr} ${cur===id?'aria-current="page"':''}>${icon||''}<span>${label}</span></button>`;
-  const items=item('home','דף הבית',leaf(20),'data-go="home"')+item('rights','מה מגיע לי',IC.rights,'data-tabgo="rights"')+item('orgs','ארגונים ועמותות',IC.orgs,'data-tabgo="orgs"')+item('tasks','מה לעשות ומתי',IC.tasks,'data-tabgo="tasks"')+item('about','מקורות המידע','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>','data-go="about"')+item('privacy','מדיניות פרטיות','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>','data-go="privacy" class="m-only"')+item('access','הצהרת נגישות','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="4.5" r="1.8"/><path d="M5 8.5l7 1.5 7-1.5M12 10v5M12 15l-3.5 6M12 15l3.5 6"/></svg>','data-go="access" class="m-only"');
+  const items=item('home','דף הבית',leaf(20),'data-go="home"')+item('rights','מה הזכויות שלי',IC.rights,'data-tabgo="rights"')+item('orgs','ארגונים ועמותות',IC.orgs,'data-tabgo="orgs"')+item('tasks','מה לעשות ומתי',IC.tasks,'data-tabgo="tasks"')+item('about','מקורות המידע','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>','data-go="about"')+item('privacy','מדיניות פרטיות','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>','data-go="privacy" class="m-only"')+item('access','הצהרת נגישות','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="4.5" r="1.8"/><path d="M5 8.5l7 1.5 7-1.5M12 10v5M12 15l-3.5 6M12 15l3.5 6"/></svg>','data-go="access" class="m-only"');
   return `<header class="top"><button class="brand" data-go="home"><svg viewBox="18 28 124 112" width="34" height="31" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round">
 <path d="M22 136C22 100 36 76 60 72C80 74 92 96 94 136Z" fill="var(--primary-soft)" stroke="var(--primary)" stroke-width="2.5"/>
 <path d="M66 136C68 102 82 80 104 78C126 80 138 102 138 136Z" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
@@ -362,16 +369,21 @@ function viewMy(){
     <div class="notice" style="background:var(--primary-soft);margin-top:0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" style="flex:none;color:var(--primary);margin-top:3px"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>${esc(SITE.disclaimer.tasksLateNotice)}</span></div>
     <div class="tabs" role="tablist" style="margin-top:16px">${stages.map(s=>`<button role="tab" aria-selected="${s.id===S.stage}" data-stage="${s.id}">${esc(s.label)}</button>`).join('')}</div>
     <div class="tasks">${st.map(taskHtml).join('')}</div>`;}
-  return `<h1 class="sr">${({rights:'מה מגיע לי',orgs:'ארגונים ועמותות',tasks:'מה לעשות ומתי'})[S.tab]}</h1>`+summaryBlock()+tabs+body+`<h2>רוצה לוודא או לקבל עזרה אישית?</h2>${verify}`;
+  return `<h1 class="sr">${({rights:'מה הזכויות שלי',orgs:'ארגונים ועמותות',tasks:'מה לעשות ומתי'})[S.tab]}</h1>`+summaryBlock()+tabs+body+`<h2>רוצה לוודא או לקבל עזרה אישית?</h2>${verify}`;
 }
+const SRCICON='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/><path d="M8 7h8M8 11h6"/></svg>';
+function srcName(u){const h=(u.match(/^https?:\/\/([^\/]+)/)||[,''])[1];
+  if(/btl\.gov\.il/.test(h))return 'ביטוח לאומי';if(/mod\.gov\.il/.test(h))return 'משרד הביטחון – אגף משפחות והנצחה';
+  if(/kolzchut/.test(h))return 'כל זכות – אתר מידע על זכויות';if(/gov\.il/.test(h))return 'אתר השירותים הממשלתי gov.il';return h.replace(/^www\./,'');}
 function viewRight(){
   const r=RIGHTS.find(x=>x.id===S.id);
   const sec=(l,v)=>v?`<section><span class="label">${l}</span>${esc(v)}</section>`:'';
   return `<button class="linkbtn" data-act="back">→ חזרה</button><div class="detail" style="margin-top:14px"><h1>${esc(r.title)}</h1>
   ${sec('בקצרה',r.summary)}${flagBox(r)}${sec('למי מגיע',r.eligibility)}${r.amount?`<section><span class="label">כמה</span>${esc(r.amount)}<span class="star" aria-hidden="true">*</span><p class="amountnote">${asof(SITE.disclaimer.amountNote)}</p></section>`:''}${sec('איך מגישים',r.howToApply)}${sec('עד מתי',r.deadline)}
   ${r.note?`<p class="note">${esc(r.note)}</p>`:''}
-  <p><a class="btn" style="text-decoration:none;display:inline-block" href="${esc(r.officialUrl)}" target="_blank" rel="noopener noreferrer">לאתר הרשמי</a></p>
-  <p class="asof">${asof(SITE.disclaimer.card.replace('{asOf}',r.asOf))} · <a href="${esc(r.sourceUrl)}" target="_blank" rel="noopener noreferrer">מקור</a></p></div>`;
+  <p><a class="btn" style="text-decoration:none;display:inline-block" href="${esc(r.officialUrl)}" target="_blank" rel="noopener noreferrer">${/kolzchut/.test(r.officialUrl)?'למידע המלא באתר כל זכות':'לאתר הרשמי'}</a></p>
+  <section class="srcbox"><span class="srcico" aria-hidden="true">${SRCICON}</span><div><span class="label">מקור המידע</span><strong>${esc(srcName(r.sourceUrl))}</strong><a href="${esc(r.sourceUrl)}" target="_blank" rel="noopener noreferrer">לעמוד המקור<span class="sr"> (נפתח בחלון חדש)</span></a></div></section>
+  <p class="asof">${asof(SITE.disclaimer.card.replace('{asOf}',r.asOf))}</p></div>`;
 }
 function viewOrg(){
   const o=ORGS.find(x=>x.id===S.id);
