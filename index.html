@@ -11,6 +11,12 @@
 <meta property="og:locale" content="he_IL">
 <meta property="og:title" content="מידע לאלמנות ולאלמנים">
 <meta property="og:description" content="מקום אחד שעושה סדר לאלמנות ולאלמנים בישראל: זכויות, קצבאות ומענקים, ליווי ותמיכה של עמותות, ומה לעשות ומתי – מותאם אישית, בלי הרשמה.">
+<meta property="og:url" content="https://almanim.co.il/">
+<meta property="og:image" content="https://almanim.co.il/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://almanim.co.il/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <title>מידע לאלמנות ולאלמנים</title>
 <style>
@@ -50,9 +56,9 @@ button{font-family:inherit}
 :focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 .home{text-align:center;padding-block:28px 32px;background:radial-gradient(ellipse at 50% 0%,var(--sand) 0%,transparent 70%);border-radius:24px}
 .embrace{display:block;margin:0 auto 6px}
-.welcome{max-width:36ch;margin:0 auto 14px;color:var(--text);font-size:18px}
+.welcome{max-width:50ch;margin:0 auto 14px;color:var(--text);font-size:18px}
 .home .leaf{margin-inline:auto;display:block}
-.home p.lead{font-size:18px;max-width:30ch;margin:0 auto 24px}
+.home p.lead{font-size:18px;max-width:50ch;margin:0 auto 24px}
 .progress{color:var(--muted);font-size:15px;margin-bottom:6px}
 .choices{display:grid;gap:10px;margin-block:18px 24px}
 .choice{display:block;width:100%;text-align:start;background:var(--surface);border:2px solid var(--border);border-radius:14px;padding:14px 16px;font:inherit;color:var(--text);cursor:pointer}
@@ -114,6 +120,7 @@ button{font-family:inherit}
 footer.site{margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:15px;color:var(--muted)}
 .helpline{background:var(--sand);border:1px solid var(--border);border-radius:12px;padding:12px 16px;margin-top:32px;text-align:center;font-size:15px}
 .helpline strong{color:var(--ink)}
+.helpline small{display:block;font-size:13px;color:var(--muted);margin-top:2px}
 a{color:var(--ink)}
 [hidden]{display:none!important}
 .brand svg{display:block;flex:none}
@@ -217,10 +224,10 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
 </head>
 <body>
 <div id="app" dir="rtl" lang="he"></div>
-<script src="data/site.js?v=47ceb42a"></script>
-<script src="data/rights.js?v=4f7928ca"></script>
-<script src="data/tasks.js?v=c5ff9ea9"></script>
-<script src="data/organizations.js?v=d14319b1"></script>
+<script src="data/site.js?v=485ced86"></script>
+<script src="data/rights.js?v=89574ffe"></script>
+<script src="data/tasks.js?v=01c8d6d0"></script>
+<script src="data/organizations.js?v=fe56f462"></script>
 <script>
 if(!window.DATA_site||!window.DATA_rights||!window.DATA_tasks||!window.DATA_organizations){
   document.addEventListener('DOMContentLoaded',function(){var a=document.getElementById('app');if(a)a.innerHTML='<div style="padding:40px 16px;text-align:center;font-family:Arial,sans-serif"><h1 style="font-size:22px">אחד מקובצי התוכן לא נטען</h1><p>כנראה נפלה טעות קטנה (פסיק או מירכאות) באחד הקבצים בתיקייה data. כדאי לבטל את השינוי האחרון ב-GitHub ולנסות שוב.</p></div>';});
@@ -281,8 +288,8 @@ function viewHome(){
 <path d="M70 92C88 84 112 88 124 106" stroke="var(--primary)" stroke-width="7"/>
 <path d="M92 98C76 92 54 96 42 112" stroke="var(--accent)" stroke-width="7"/>
 
-</svg><h1>אנחנו כאן איתך</h1><p class="welcome">אם הגעת לכאן, כנראה שאיבדת את האדם הכי קרוב לך. אין מילים שיקלו על הכאב, אבל אפשר להקל על הדרך. ריכזנו בשבילך את מה שחשוב לדעת – בקצב שלך, בלי לחץ.</p>
-  <p class="lead" style="margin-bottom:0;max-width:34ch">מקום אחד שעושה סדר לאלמנות ולאלמנים: מה הזכויות שלך, אילו ארגונים ועמותות יכולים ללוות ולעזור, ואיך מתמודדים עם הבירוקרטיה – צעד אחר צעד.</p><h2 style="margin:28px 0 0;font-size:22px">במה אפשר לעזור לך?</h2>
+</svg><h1>אנחנו כאן איתך</h1><p class="welcome">אם הגעת לכאן, כנראה שאיבדת את האדם הכי קרוב לך. אין מילים שיקלו על הכאב, אבל אפשר להקל על הדרך. ריכזנו בשבילך את מה שחשוב לדעת – בקצב&nbsp;שלך, בלי&nbsp;לחץ.</p>
+  <p class="lead" style="margin-bottom:0">מקום אחד שעושה סדר לאלמנות ולאלמנים: מה הזכויות שלך, אילו ארגונים ועמותות יכולים ללוות ולעזור, ואיך מתמודדים עם הבירוקרטיה – צעד&nbsp;אחר&nbsp;צעד.</p><h2 style="margin:28px 0 0;font-size:22px">במה אפשר לעזור לך?</h2>
   <div class="options">${TABS.map(([id,ti,l])=>`<button class="opt" data-start="${id}"><span class="ic">${IC[id]}</span><b>${ti}</b><span class="l">${l}</span></button>`).join('')}</div>
   ${S.done&&S.cat?`<p class="notice" style="background:var(--primary-soft);margin:0 0 4px;justify-content:center;font-size:17px;flex-wrap:wrap"><span><strong>המידע מותאם לך לפי:</strong> ${esc(summaryText())}</span> <button class="linkbtn" data-act="change">לשנות את התשובה</button></p>`:`<p class="notice" style="background:var(--primary-soft);margin:0 0 4px;justify-content:center;font-size:17px"><span><strong>מותאם אישית:</strong> הצגת מידע רלוונטי עבורך לפי סיבת הפטירה של בן או בת הזוג. ניתן גם לקבל את כל המידע בלי סינון.</span></p>`}
   <div class="privacy"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" style="flex:none;color:var(--primary)"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><p>${SITE.disclaimer.privacyShort.split('\n').map((x,i)=>i?`<span>${esc(x)}</span>`:`<strong>${esc(x)}</strong>`).join('')}</p></div>
@@ -384,7 +391,7 @@ function viewRight(){
   return `<button class="linkbtn" data-act="back">→ חזרה</button><div class="detail" style="margin-top:14px"><h1>${esc(r.title)}</h1>
   ${sec('בקצרה',r.summary)}${flagBox(r)}${sec('למי מגיע',r.eligibility)}${r.amount?`<section><span class="label">כמה</span>${esc(r.amount)}<span class="star" aria-hidden="true">*</span><p class="amountnote">${asof(SITE.disclaimer.amountNote)}</p></section>`:''}${sec('איך מגישים',r.howToApply)}${sec('עד מתי',r.deadline)}
   ${r.note?`<p class="note">${esc(r.note)}</p>`:''}
-  <p><a class="btn" style="text-decoration:none;display:inline-block" href="${esc(r.officialUrl)}" target="_blank" rel="noopener noreferrer">${/kolzchut/.test(r.officialUrl)?'למידע המלא באתר כל זכות':'לאתר הרשמי'}</a></p>
+  <p><a class="btn" style="text-decoration:none;display:inline-block" href="${esc(r.officialUrl)}" target="_blank" rel="noopener noreferrer">${/kolzchut/.test(r.officialUrl)?'למידע המלא באתר כל זכות':/mishpahot-hantzaha/.test(r.officialUrl)?'לכל ההטבות באתר אגף משפחות':'לאתר הרשמי'}</a></p>
   <section class="srcbox"><span class="srcico" aria-hidden="true">${SRCICON}</span><div><span class="label">מקור המידע</span><strong>${esc(srcName(r.sourceUrl))}</strong><a href="${esc(r.sourceUrl)}" target="_blank" rel="noopener noreferrer">לעמוד המקור<span class="sr"> (נפתח בחלון חדש)</span></a></div></section>
   <p class="asof">${asof(SITE.disclaimer.card.replace('{asOf}',r.asOf))}</p></div>`;
 }
@@ -415,7 +422,7 @@ function viewAbout(){
   const verify=verifyHtml();
   const src=SITE.sources.map(x=>`<div class="src"><strong>${esc(x.name)}</strong><span class="muted small">${esc(x.about)}</span>${x.url?`<a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">לאתר</a>`:''}</div>`).join('');
   const M=SITE.aboutMe;
-  const me=M?`<section class="aboutme"><div class="dedication feature"><span aria-hidden="true" style="display:block;width:48px;height:1px;background:var(--accent)"></span><p>${esc(SITE.dedication)}</p></div><h2>${esc(M.title)}</h2>${M.paragraphs.map(x=>`<p>${esc(x)}</p>`).join('')}<p>${esc(M.contact)} <a class="maillink" dir="ltr" href="mailto:${esc(SITE.contactEmail)}">${esc(SITE.contactEmail)}</a></p><p class="sig">${esc(M.signature)}</p></section>`:'';
+  const me=M?`<section class="aboutme"><div class="dedication feature"><p>${esc(SITE.dedication)}</p></div><h2>${esc(M.title)}</h2>${M.paragraphs.map(x=>`<p>${esc(x)}</p>`).join('')}<p>${esc(M.contact)} <a class="maillink" dir="ltr" href="mailto:${esc(SITE.contactEmail)}">${esc(SITE.contactEmail)}</a></p><p class="sig">${esc(M.signature)}</p></section>`:'';
   return `<h1>על האתר</h1>${me}<h2>מקורות המידע</h2><p>כל המידע באתר נבדק מול מקורות רשמיים ומול אתרי הארגונים, ונכון ל-<span class="ltr">${SITE.asOf}</span>. ליד כל זכות, ארגון ופעולה באתר יש קישור למקור שלו.</p>
   <div class="srcs">${src}</div>
   ${M?'':`<h2>מי אנחנו</h2><p>${esc(SITE.disclaimer.volunteerNote)}</p><div class="dedication" style="margin-top:12px"><span aria-hidden="true" style="display:block;width:48px;height:1px;background:var(--accent)"></span><p>${esc(SITE.dedication)}</p></div>`}<h2>פרטיות</h2><p>${esc(SITE.disclaimer.privacyLong)} <button class="linkbtn" data-go="privacy">למדיניות הפרטיות המלאה</button></p><h2>חשוב לדעת</h2><p>${esc(SITE.disclaimer.aboutPage)}</p><p>לעדכונים והצעות: <a class="maillink" dir="ltr" href="mailto:${esc(SITE.contactEmail)}">${esc(SITE.contactEmail)}</a></p>
