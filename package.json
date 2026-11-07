@@ -1,0 +1,19 @@
+{
+  "name": "almanim",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personalized rights, support organizations and next steps for widows and widowers in Israel – a static site, its test suite and an MCP server over the same verified data.",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "check-links": "node scripts/check-links.js",
+    "mcp": "node mcp/server.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  }
+}

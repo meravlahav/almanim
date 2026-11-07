@@ -228,8 +228,9 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
 <script src="data/rights.js?v=89574ffe"></script>
 <script src="data/tasks.js?v=01c8d6d0"></script>
 <script src="data/organizations.js?v=fe56f462"></script>
+<script src="data/rules.js?v=dc718dfa"></script>
 <script>
-if(!window.DATA_site||!window.DATA_rights||!window.DATA_tasks||!window.DATA_organizations){
+if(!window.DATA_site||!window.DATA_rights||!window.DATA_tasks||!window.DATA_organizations||!window.ALMANIM_RULES){
   document.addEventListener('DOMContentLoaded',function(){var a=document.getElementById('app');if(a)a.innerHTML='<div style="padding:40px 16px;text-align:center;font-family:Arial,sans-serif"><h1 style="font-size:22px">אחד מקובצי התוכן לא נטען</h1><p>כנראה נפלה טעות קטנה (פסיק או מירכאות) באחד הקבצים בתיקייה data. כדאי לבטל את השינוי האחרון ב-GitHub ולנסות שוב.</p></div>';});
   throw new Error('data file failed to load');
 }
@@ -245,14 +246,7 @@ const LEAF='<svg viewBox="0 0 32 32" width="__W__" height="__W__" fill="none" st
 const leaf=w=>LEAF.replace(/__W__/g,w);
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const asof=s=>esc(s).replace('{asOf}','<span class="ltr">'+SITE.asOf+'</span>');
-function visible(it){
-  if(S.cat && !it.categories.includes('all') && !it.categories.includes(S.cat)) return false;
-  if(S.kidsSkipped) return true;
-  const a=S.ages;
-  if(it.kidsRule==='noKidsOnly') return a.length===0;
-  if(it.kidsRule==='childInRange') return a.some(x=>x>=it.childAgeMin&&x<=it.childAgeMax);
-  return true;
-}
+function visible(it){return ALMANIM_RULES.isVisible(it,{cause:S.cat,childAges:S.kidsSkipped?null:S.ages});}
 const catLabel=id=>(SITE.categories.find(c=>c.id===id)||{}).label;
 function ageWord(n){return n===0?'מתחת לשנה':n>=30?'30 ומעלה':String(n)}
 function summaryText(){
