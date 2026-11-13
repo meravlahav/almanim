@@ -218,16 +218,21 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid 
 .pp section{display:grid;gap:4px;margin-top:18px}
 .pp h2{margin:0;font-size:22px}
 .pp p{margin:0}
+.legal>p{margin:0 0 10px}
+.legal section{gap:8px;margin-top:24px}
+.legal h2{font-size:21px}
+.legal ol.acclist,.legal ul.acclist{margin:2px 0}
+.legal a{overflow-wrap:anywhere}
 .helpline{display:flex;flex-direction:column;align-items:center;gap:8px}
 .hlcall{background:var(--surface)}
 </style>
 </head>
 <body>
 <div id="app" dir="rtl" lang="he"></div>
-<script src="data/site.js?v=485ced86"></script>
-<script src="data/rights.js?v=89574ffe"></script>
+<script src="data/site.js?v=e17f9f67"></script>
+<script src="data/rights.js?v=74bc055c"></script>
 <script src="data/tasks.js?v=01c8d6d0"></script>
-<script src="data/organizations.js?v=fe56f462"></script>
+<script src="data/organizations.js?v=985ae917"></script>
 <script src="data/rules.js?v=dc718dfa"></script>
 <script>
 if(!window.DATA_site||!window.DATA_rights||!window.DATA_tasks||!window.DATA_organizations||!window.ALMANIM_RULES){
@@ -257,7 +262,7 @@ function go(v,extra){Object.assign(S,{view:v,menu:false},extra||{});PUSH=true;re
 function header(){
   const cur=S.view==='my'?S.tab:S.view;
   const item=(id,label,icon,attr)=>`<button ${attr} ${cur===id?'aria-current="page"':''}>${icon||''}<span>${label}</span></button>`;
-  const items=item('home','דף הבית',leaf(20),'data-go="home"')+item('rights','מה הזכויות שלי',IC.rights,'data-tabgo="rights"')+item('orgs','ליווי ותמיכה',IC.orgs,'data-tabgo="orgs"')+item('tasks','מה לעשות ומתי',IC.tasks,'data-tabgo="tasks"')+item('about','על האתר','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>','data-go="about"')+item('privacy','מדיניות פרטיות','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>','data-go="privacy" class="m-only"')+item('access','הצהרת נגישות','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="4.5" r="1.8"/><path d="M5 8.5l7 1.5 7-1.5M12 10v5M12 15l-3.5 6M12 15l3.5 6"/></svg>','data-go="access" class="m-only"');
+  const items=item('home','דף הבית',leaf(20),'data-go="home"')+item('rights','מה הזכויות שלי',IC.rights,'data-tabgo="rights"')+item('orgs','ליווי ותמיכה',IC.orgs,'data-tabgo="orgs"')+item('tasks','מה לעשות ומתי',IC.tasks,'data-tabgo="tasks"')+item('about','על האתר','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>','data-go="about"')+item('privacy','מדיניות פרטיות','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>','data-go="privacy" class="m-only"')+item('access','הצהרת נגישות','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="4.5" r="1.8"/><path d="M5 8.5l7 1.5 7-1.5M12 10v5M12 15l-3.5 6M12 15l3.5 6"/></svg>','data-go="access" class="m-only"')+item('terms','תנאי שימוש','<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg>','data-go="terms" class="m-only"');
   return `<header class="top"><button class="brand" data-go="home"><svg viewBox="18 28 124 112" width="34" height="31" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round">
 <path d="M22 136C22 100 36 76 60 72C80 74 92 96 94 136Z" fill="var(--primary-soft)" stroke="var(--primary)" stroke-width="2.5"/>
 <path d="M66 136C68 102 82 80 104 78C126 80 138 102 138 136Z" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
@@ -271,7 +276,7 @@ function header(){
   <nav class="mainnav" id="mainmenu" aria-label="תפריט ראשי" ${S.menu?'data-open':''}>${items}</nav></header>`;
 }
 function footer(){
-  return `<footer class="site"><p>${asof(SITE.disclaimer.footer)}</p><p>נכתב בהתנדבות על ידי מרב להב · לעדכונים והצעות: <a class="maillink" dir="ltr" href="mailto:${esc(SITE.contactEmail)}">${esc(SITE.contactEmail)}</a> · <button class="linkbtn" data-go="about">על האתר</button> · <button class="linkbtn" data-go="privacy">מדיניות פרטיות</button> · <button class="linkbtn" data-go="access">הצהרת נגישות</button></p></footer>`;
+  return `<footer class="site"><p>${asof(SITE.disclaimer.footer)}</p><p>נכתב בהתנדבות על ידי מרב להב · לעדכונים והצעות: <a class="maillink" dir="ltr" href="mailto:${esc(SITE.contactEmail)}">${esc(SITE.contactEmail)}</a> · <button class="linkbtn" data-go="about">על האתר</button> · <button class="linkbtn" data-go="terms">תנאי שימוש</button> · <button class="linkbtn" data-go="privacy">מדיניות פרטיות</button> · <button class="linkbtn" data-go="access">הצהרת נגישות</button></p></footer>`;
 }
 function viewHome(){
   return `<div class="home"><svg viewBox="0 0 160 140" width="150" height="131" class="embrace" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -404,14 +409,23 @@ function viewOrg(){
   <section><span class="label">למי</span>${esc(o.audience)}</section><section><span class="label">מה עושים שם</span>${esc(o.oneLiner)}</section><section><span class="label">איפה</span>${esc(o.location)}</section>
   <div class="contact">${c}</div><p class="asof" style="margin-top:16px">*המידע נכון ל-<span class="ltr">${o.asOf}</span> · <a href="${esc(o.sourceUrl)}" target="_blank" rel="noopener noreferrer">מקור: אתר העמותה</a></p></div>`;
 }
-function viewPrivacy(){const P=SITE.privacyPolicy;if(!P)return `<h1>העמוד עוד לא מעודכן</h1><p>כנראה שהקובץ data/site.js באתר הוא גרסה ישנה. צריך להעלות את הקובץ site.js המעודכן לתיקייה data במאגר ב-GitHub.</p>`;
-  return `<div class="pp"><h1>${esc(P.title)}</h1><p>${esc(P.intro)}</p>${P.sections.map(x=>`<section><h2>${esc(x.h)}</h2><p>${esc(x.p)}</p>${x.link?`<p><a href="${esc(x.link)}" target="_blank" rel="noopener noreferrer">${esc(x.linkText)}</a></p>`:''}</section>`).join('')}
-  <section><h2>שאלות?</h2><p>אפשר לכתוב לנו: <a class="maillink" dir="ltr" href="mailto:${esc(SITE.contactEmail)}">${esc(SITE.contactEmail)}</a></p></section>
-  <p class="small muted" style="margin-top:18px">${asof(P.updated)}</p></div>`;}
-function viewAccess(){const A=SITE.accessibility;if(!A)return `<h1>העמוד עוד לא מעודכן</h1><p>כנראה שהקובץ data/site.js באתר הוא גרסה ישנה. צריך להעלות את הקובץ site.js המעודכן לתיקייה data במאגר ב-GitHub.</p>`;
-  return `<h1>${esc(A.title)}</h1><p>${esc(A.intro)}</p><h2>${esc(A.doneTitle)}</h2><ul class="acclist">${A.done.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
-  <h2>${esc(A.limitsTitle)}</h2><p>${esc(A.limits)}</p><h2>${esc(A.contactTitle)}</h2><p>${esc(A.contact)} <a class="maillink" dir="ltr" href="mailto:${esc(SITE.contactEmail)}">${esc(SITE.contactEmail)}</a></p>
-  <p class="small muted">${asof(A.updated)}</p>`;}
+function rich(t){let h=esc(t);
+  h=h.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
+  h=h.replace(/(https:\/\/[A-Za-z0-9.\-\/]+[A-Za-z0-9\/])/g,'<a href="$1" dir="ltr">$1</a>');
+  h=h.replace(/([A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,})/g,'<a class="maillink" dir="ltr" href="mailto:$1">$1</a>');
+  return h.replace(/\n/g,'<br>');}
+function legalBlock(b){
+  if(b.p!=null)return `<p>${rich(b.p)}</p>`;
+  if(b.ul)return `<ul class="acclist">${b.ul.map(x=>`<li>${rich(x)}</li>`).join('')}</ul>`;
+  if(b.ol)return `<ol class="acclist">${b.ol.map(x=>`<li>${rich(x)}</li>`).join('')}</ol>`;
+  if(b.link)return `<p><a href="${esc(b.link)}" target="_blank" rel="noopener noreferrer">${esc(b.text)}</a></p>`;
+  if(b.go)return `<p class="legalgo">${b.go.map(([v,t])=>`<button class="linkbtn" data-go="${esc(v)}">${esc(t)}</button>`).join(' · ')}</p>`;
+  return '';}
+function viewLegal(D){if(!D)return `<h1>העמוד עוד לא מעודכן</h1><p>כנראה שהקובץ data/site.js באתר הוא גרסה ישנה. צריך להעלות את הקובץ site.js המעודכן לתיקייה data במאגר ב-GitHub.</p>`;
+  return `<div class="pp legal"><h1>${esc(D.title)}</h1>${D.intro.map(legalBlock).join('')}${D.sections.map(x=>`<section><h2>${x.n}. ${esc(x.h)}</h2>${x.blocks.map(legalBlock).join('')}</section>`).join('')}${D.updated?`<p class="small muted" style="margin-top:22px">${rich(D.updated)}</p>`:''}</div>`;}
+function viewPrivacy(){return viewLegal(SITE.privacyPolicy)}
+function viewAccess(){return viewLegal(SITE.accessibility)}
+function viewTerms(){return viewLegal(SITE.termsOfUse)}
 function viewAbout(){
   const verify=verifyHtml();
   const src=SITE.sources.map(x=>`<div class="src"><strong>${esc(x.name)}</strong><span class="muted small">${esc(x.about)}</span>${x.url?`<a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">לאתר</a>`:''}</div>`).join('');
@@ -427,7 +441,7 @@ function stateHash(){const p=new URLSearchParams();HKEYS.forEach(k=>{const v=S[k
   const s=p.toString();return s?'#'+s:'#';}
 function readHash(){const p=new URLSearchParams(location.hash.slice(1));
   Object.assign(S,{done:false,view:'home',tab:'rights',cat:null,catSkipped:false,ages:[],kidsSkipped:true,count:0,id:null,back:'my',stage:null,menu:false});
-  if(p.get('view')&&['home','q1','q2','my','right','org','about','access','privacy'].includes(p.get('view')))S.view=p.get('view');
+  if(p.get('view')&&['home','q1','q2','my','right','org','about','access','privacy','terms'].includes(p.get('view')))S.view=p.get('view');
   if(['rights','orgs','tasks'].includes(p.get('tab')))S.tab=p.get('tab');
   if(p.get('cat')&&SITE.categories.some(c=>c.id===p.get('cat')))S.cat=p.get('cat');
   S.catSkipped=p.get('catSkipped')==='true';S.done=p.get('done')==='true';
@@ -439,7 +453,7 @@ function readHash(){const p=new URLSearchParams(location.hash.slice(1));
 let PUSH=false;
 function render(){
   if(S.view==='my'&&!S.done)S.view='q1';
-  const v={home:viewHome,q1:viewQ1,q2:viewQ1,my:viewMy,right:viewRight,org:viewOrg,about:viewAbout,access:viewAccess,privacy:viewPrivacy}[S.view]();
+  const v={home:viewHome,q1:viewQ1,q2:viewQ1,my:viewMy,right:viewRight,org:viewOrg,about:viewAbout,access:viewAccess,privacy:viewPrivacy,terms:viewTerms}[S.view]();
   document.getElementById('app').innerHTML='<button class="skip" data-act="skipmain">דילוג לתוכן</button>'+header()+'<main id="main" tabindex="-1">'+v+'</main>'+'<div class="helpline"><span>רוצה לדבר עם מישהו? ער"ן – עזרה ראשונה נפשית, כל שעה</span><a class="vbtn hlcall" href="tel:1201" aria-label="להתקשר לער&quot;ן, 1201"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>להתקשר ל-1201</span></a></div>'+footer();
   telify(document.getElementById('main'));
   const h=stateHash();if(h!==(location.hash||'#')){try{history[PUSH?'pushState':'replaceState'](null,'',h)}catch(e){}}PUSH=false;
