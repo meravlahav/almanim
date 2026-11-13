@@ -675,7 +675,7 @@ window.DATA_organizations = [
       "סיוע כלכלי"
     ],
     "location": "בכל הארץ",
-    "website": "https://www.yadeliezer.org.il",
+    "website": "https://yadeliezer.org.il/",
     "phone": {
       "display": "02-5912222",
       "tel": "+97225912222"
@@ -693,7 +693,7 @@ window.DATA_organizations = [
     "kidsRule": "any",
     "childAgeMin": null,
     "childAgeMax": null,
-    "sourceUrl": "https://www.yadeliezer.org.il",
+    "sourceUrl": "https://yadeliezer.org.il/",
     "asOf": "12.10.2026"
   },
   {

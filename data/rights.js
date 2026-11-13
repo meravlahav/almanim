@@ -38,7 +38,7 @@ window.DATA_rights = [
     "deadline": "",
     "note": "במקרה של זכאות גם לקצבת שאירים מביטוח לאומי – צריך לבחור באחת מהן.",
     "officialUrl": "https://mishpahot-hantzaha.mod.gov.il/widows",
-    "sourceUrl": "https://mishpahot-hantzaha.mod.gov.il/benefits/widows",
+    "sourceUrl": "https://mishpahot-hantzaha.mod.gov.il/widows",
     "categories": [
       "war"
     ],
